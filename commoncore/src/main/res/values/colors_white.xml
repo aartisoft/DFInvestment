@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--&lt;!&ndash; 此处的颜色我也不知道那里会用,暂时不管,起 &ndash;&gt;-->
+    <!--<color name="colorItems">#ffffff</color>-->
+    <!--<color name="colorItemsDark">#dedede</color>-->
+    <!--<color name="colorTitle">#FFFFFF</color>-->
+    <!--<color name="colorTextBlack">#333333</color>-->
+    <!--<color name="colorTextBlackLight">#636363</color>-->
+    <!--<color name="colorWhite">#ffffff</color>-->
+    <!--<color name="colorWhitePressed">#e8e8e8</color>-->
+
+    <!--&lt;!&ndash;多状态文本颜色控制&ndash;&gt;-->
+    <!--<color name="status_layout_click_view_text_color">@color/colorAccent</color>-->
+    <!--<color name="status_layout_tip_text_color">@color/text_tip</color>-->
+    <!--&lt;!&ndash; 此处的颜色我也不知道那里会用,暂时不管,止 &ndash;&gt;-->
+
+
+    <!--&lt;!&ndash; *默认黑色主题* &ndash;&gt;-->
+    <!--&lt;!&ndash; *默认黑色主题* &ndash;&gt;-->
+    <!--&lt;!&ndash; *默认黑色主题* &ndash;&gt;-->
+    <!--&lt;!&ndash;1. 黑色主题 &ndash;&gt;-->
+    <!--<color name="colorPrimary">#ffffff</color>-->
+    <!--<color name="colorPrimaryDark">#ffffff</color>-->
+    <!--<color name="colorAccent">#FEDD28</color>-->
+
+    <!--&lt;!&ndash; 该项目多出来一种颜色,设计师专有&ndash;&gt;-->
+    <!--&lt;!&ndash;<color name="colorPrimary_light">#FF8161</color>&ndash;&gt;-->
+    <!--<color name="colorBackground">#f8f8f8</color>-->
+    <!--<color name="colorBackground_dark">#bcbcbc</color>-->
+    <!--<color name="colorLine">#cccccc</color>-->
+
+    <!--&lt;!&ndash;  2.toolbar相关的颜色配置,开始 &ndash;&gt;-->
+    <!--&lt;!&ndash;TitleBarView背景色&ndash;&gt;-->
+    <!--<color name="colorTitleBackground">@color/colorPrimary</color>-->
+    <!--&lt;!&ndash;TitleBarView 文字颜色&ndash;&gt;-->
+    <!--<color name="colorTitleText">#222222</color>-->
+    <!--&lt;!&ndash;TitleBarView 下划线颜色&ndash;&gt;-->
+    <!--<color name="colorTitleDivider">#898989</color>-->
+    <!--&lt;!&ndash;  toolbar相关的颜色配置,结束 &ndash;&gt;-->
+
+
+    <!--&lt;!&ndash;  3.TAB 配置开始(默认颜色, 使用时,可具体设置) &ndash;&gt;-->
+    <!--&lt;!&ndash;主页tab背景色&ndash;&gt;-->
+    <!--<color name="colorTabBackground">#FCFCFC</color>-->
+    <!--&lt;!&ndash;主页上划线颜色&ndash;&gt;-->
+    <!--<color name="colorTabUnderline">#d6d6d6</color>-->
+    <!--&lt;!&ndash;主页tab文字默认颜色&ndash;&gt;-->
+    <!--<color name="colorTabTextUnSelect">#909090</color>-->
+    <!--&lt;!&ndash;主页tab文字选中颜色&ndash;&gt;-->
+    <!--<color name="colorTabTextSelect">@color/colorAccent</color>-->
+    <!--&lt;!&ndash;  TAB 配置结束 &ndash;&gt;-->
+
+
+    <!--&lt;!&ndash;4.Glide加载图片默认占位图背景色&ndash;&gt;-->
+    <!--<color name="colorPlaceholder">#CCCCCC</color>-->
+
+
+    <!--&lt;!&ndash; 5.刷新、加载的字体颜色,开始 &ndash;&gt;-->
+    <!--&lt;!&ndash;LoadMoreView 文本颜色&ndash;&gt;-->
+    <!--<color name="colorLoadMoreText">@color/text_content</color>-->
+    <!--&lt;!&ndash;LoadMoreView loading颜色&ndash;&gt;-->
+    <!--<color name="colorLoadMoreProgress">@color/text_content</color>-->
+    <!--&lt;!&ndash; 刷新\加载的字体颜色,结束 &ndash;&gt;-->
+
+
+    <!--&lt;!&ndash; 6.Activity滑动返回背景&ndash;&gt;-->
+    <!--<color name="colorSwipeBackBackground">#3b3b3b</color>-->
+    <!--&lt;!&ndash; 6.Activity滑动返回背景,结束&ndash;&gt;-->
+
+    <!--&lt;!&ndash; 7.内容颜色,开始,很重要: 以后所有的字体颜色都需要从这里取&ndash;&gt;-->
+    <!--<color name="text_title">#222222</color>-->
+    <!--<color name="text_content">#555555</color>-->
+    <!--<color name="text_tip">#777777</color>-->
+    <!--<color name="text_hint">#999999</color>-->
+
+    <!--<color name="text_green">#34D140</color>-->
+    <!--<color name="text_red">#FF4D4D</color>-->
+
+
+</resources>

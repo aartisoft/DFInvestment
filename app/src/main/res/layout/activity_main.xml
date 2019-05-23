@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorWhite"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+
+        <FrameLayout
+            android:id="@+id/act_main_frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:layout_weight="1"
+            tools:ignore="InefficientWeight" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/color_f0f0f0"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_61"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@color/colorWhite"
+            tools:ignore="DisableBaselineAlignment">
+
+            <LinearLayout
+                android:id="@+id/acct_main_homepage_layout"
+                android:layout_width="@dimen/dp_0"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+
+                <CheckBox
+                    android:id="@+id/acct_main_homepage_checkbox"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:button="@null"
+                    android:background="@drawable/main_checkbox_homepage_shape"
+                    android:checked="true"
+                    />
+
+
+                <TextView
+                    android:id="@+id/acct_main_homepage_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_17B2AA"
+                    android:text="书城"
+                    android:textSize="@dimen/sp_13"
+                    android:layout_marginTop="@dimen/dp_2"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/acct_main_market_layout"
+                android:layout_width="@dimen/dp_0"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+
+                <CheckBox
+                    android:id="@+id/acct_main_market_checkbox"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:button="@null"
+                    android:background="@drawable/main_checkbox_market_shape"
+                    android:checked="false"
+                    />
+                <TextView
+                    android:id="@+id/acct_main_market_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_4A4A4A"
+                    android:text="书架"
+                    android:textSize="@dimen/sp_13"
+                    android:layout_marginTop="@dimen/dp_2"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/acct_main_user_layout"
+                android:layout_width="@dimen/dp_0"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+
+                <CheckBox
+                    android:id="@+id/acct_main_user_checkbox"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:button="@null"
+                    android:background="@drawable/main_checkbox_user_shape"
+                    android:checked="false"
+                    />
+                <TextView
+                    android:id="@+id/acct_main_user_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_4A4A4A"
+                    android:text="我的"
+                    android:textSize="@dimen/sp_13"
+                    android:layout_marginTop="@dimen/dp_2"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

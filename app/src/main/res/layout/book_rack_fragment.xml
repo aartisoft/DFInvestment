@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_225"
+            android:id="@+id/book_rack_tital"
+            >
+
+
+            <ImageView
+                android:id="@+id/book_rack_signin_image"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/sp_17"
+                android:src="@drawable/sigin_image_second"
+                android:layout_marginTop="@dimen/dp_48"
+                />
+            <ImageView
+                android:id="@+id/book_rack_seek_image"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_61"
+                android:src="@drawable/seek_image"
+                android:layout_alignTop="@id/book_rack_signin_image"
+                android:visibility="invisible"
+                />
+
+
+            <ImageView
+                android:id="@+id/book_detail_image"
+                android:layout_width="@dimen/dp_87"
+                android:layout_height="@dimen/dp_113"
+                android:layout_marginTop="@dimen/dp_28"
+                android:layout_below="@+id/book_rack_signin_image"
+                android:layout_alignLeft="@id/book_rack_signin_image"
+                />
+
+
+            <TextView
+                android:id="@+id/book_detail_tital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dp_25"
+                android:textColor="@color/colorWhite"
+                android:text="漫步花王二姐"
+                android:layout_toRightOf="@+id/book_detail_image"
+                android:layout_alignTop="@+id/book_detail_image"
+                android:layout_marginLeft="@dimen/dp_30"
+                />
+
+
+
+            <LinearLayout
+                android:id="@+id/continue_reading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_below="@id/book_detail_tital"
+                android:layout_alignLeft="@id/book_detail_tital"
+                android:layout_marginTop="@dimen/dp_11"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_11"
+                    android:textColor="@color/colorWhite"
+                    android:text="继续阅读"
+                    />
+                <ImageView
+                    android:layout_width="@dimen/dp_10"
+                    android:layout_height="@dimen/dp_10"
+                    android:src="@drawable/back_f0f0f0"
+                    />
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="false"
+            android:layout_below="@id/book_rack_tital"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_44"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/dp_25"
+                    android:background="@drawable/book_rack_shaped"
+                    android:paddingLeft="@dimen/dp_16"
+                    android:paddingRight="@dimen/dp_16"
+                    android:gravity="center_vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_25"
+                        android:layout_height="@dimen/dp_25"
+                        android:src="@drawable/message_image"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_15"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:textColor="@color/color_4A4A4A"
+                        android:text="新用户全场好书免费阅读"
+                        />
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/book_rack_frag_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_10"
+                    android:nestedScrollingEnabled="false"
+                    />
+
+            </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

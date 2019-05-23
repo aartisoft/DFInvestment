@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70"
+        android:background="@color/colorWhite"
+        >
+
+        <ImageView
+            android:id="@+id/book_detail_act_back"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_27"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:src="@drawable/back_787878"
+            android:layout_marginBottom="@dimen/dp_15"
+            />
+
+        <LinearLayout
+            android:id="@+id/study_fragment_tital"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_50"
+            android:layout_marginRight="@dimen/dp_50"
+            >
+
+
+
+            <LinearLayout
+                android:id="@+id/optional_textview_layout"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                tools:ignore="RtlHardcoded">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textColor="@color/color_48C2BC"
+                    android:text="国内"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    android:id="@+id/optional_view"
+                    android:layout_width="@dimen/dp_44"
+                    android:layout_height="@dimen/dp_3"
+                    android:background="@color/color_48C2BC"
+                    android:layout_marginTop="@dimen/dp_3"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/international_layout"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                tools:ignore="RtlHardcoded">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textColor="@color/color_48C2BC"
+                    android:text="国际"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    android:id="@+id/international_view"
+                    android:layout_width="@dimen/dp_44"
+                    android:layout_height="@dimen/dp_3"
+                    android:background="@color/color_48C2BC"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:visibility="invisible"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/color_E0E0E0"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="根据阅读兴趣推荐"
+        android:textColor="@color/color_B2B6C1"
+        android:textSize="@dimen/sp_13"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/catagory_act_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

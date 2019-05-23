@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tech.com.commoncore" >
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application>
+        <activity android:name=".widget.photoPicker.MyPhotoPickerActivity" />
+        <activity android:name=".widget.photoPicker.MyPhotoPickerPreviewActivity" />
+        <activity android:name=".base.BrowerActivity" />
+        <activity android:name=".others.UserAgreementActivity" />
+    </application>
+</manifest>

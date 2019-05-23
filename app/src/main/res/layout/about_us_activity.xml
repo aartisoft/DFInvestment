@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:background="@color/colorWhite"
+        android:paddingTop="@dimen/dp_10">
+
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginTop="@dimen/sp_10"
+            android:padding="@dimen/sp_10"
+            tools:ignore="RtlHardcoded">
+
+            <ImageView
+                android:id="@+id/homepage_frag_sign_in"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:src="@drawable/back_787878"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_22"
+            android:text="服务条款"
+            android:textColor="@color/color_595959"
+            android:textSize="17sp"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/color_E0E0E0"
+        />
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/color_3B424C"
+                android:text=" 1.服务协议的确认和接纳
+
+活动行是由北京艾科创意信息技术有限公司拥有所有权与经营权产品。用户在接受活动行的服务之前，请务必仔细阅读本条款并同意本声明。访问者访问本网站或通过各类方式使用本网站的行为，都将被视为是对本声明全部内容的无异议的认可。
+
+1.1 用户直接或间接通过各类方式（如站外API引用等）产生与本网站相关的行为时，都将被视为已无条件接受本声明所涉及的全部内容；若用户对本声明的任何条款有异议，请停止使用活动行所提供的全部服务。
+
+
+1.2 当用户使用活动行的服务时，需遵守中国的法律法规并保证信息的真实性，同时应当恪守以下承诺：
+
+1)活动行在修改条款时不再另行通知用户，用户可随时通过活动行网站浏览最新服务协议条款。用户只有在同意遵守相关法律法规和本协议时，才有权使用活动行的服务，无论用户是否有意访问或使用此服务。
+
+2)如果用户不同意活动行对协议相关条款的修改，则有权停止使用服务。如果继续使用服务，则视为已接受活动行最新服务协议条款。
+
+3)用户注册时请按照提示填写正确的手机号、邮箱、姓名和密码，并确保日后更新的相关资料具有有效性和合法性。若用户提交任何违法或者活动行认为不适合在其平台上展示的资料，活动行则有理由怀疑用户的资料属于恶意操作，并且有权暂停或终止用户的账号。
+
+4)活动行仅对用户的信息与资料进行形式审查，不进行实质性审查（实质性审查包括但不限于鉴别、核实任何登记资料的真实性、正确性以及是否为最新资料的审查）对此所产生的纠纷活动行不承担过错责任。
+
+5)用户有保证其信息和资料详尽、准确并对其及进行时更改的义务。
+
+6)用户有义务在其注册信息发生变动时，及时更新相关资料以保证在使用该信息时的准确性和合法性。
+
+
+2.用户使用规则
+
+2.1 用户有义务保管好个人账号的相关信息并对以其进行的所有行为负法律责任。用户不应将其账号、密码转让或借予他人使用。因黑客行为或用户的保管疏忽导致账号、密码外泄，活动行不承担任何责任。
+
+
+2.2 用户在使用活动行的服务时，须向活动行提供真实资料并及时更新。活动行会根据用户的权限设置对用户资料的信息进行保密。
+
+
+2.3 用户同意接受活动行通过电子邮件、短信或其他方式向用户发送活动通知及其相关信息。
+
+
+2.4 根据有关法律法规，活动行在此郑重提醒用户：任何经由本服务发布的文字、图片信息，无论是公开还是私密发布，均需由活动行工作人员进行审核。活动行仅为用户提供活动发布平台，无法控制经由本服务发布的活动现场情况，因此不保证活动是否符合用户的预期。但活动行有权依法停止发布任何不符合平台规则的内容并采取相应措施，包括但不限于暂停用户使用本服务，保存有关记录，并向有关机构报告。
+
+
+2.5 用户保证对其通过活动行服务发布到网站上的内容拥有完整的合法的知识产权，保证活动行使用该内容不违反国家的法律法规，也不侵犯第三方的合法权益或承担任何义务。用户承诺上传的内容不涉及侵犯他人著作权、商标、名誉、隐私及其他一切违法内容。用户应对其所提供内容因形式、内容及授权的不完善、不合法所造成的一切后果承担完全责任。
+
+
+2.6 用户承诺遵循中华人民共和国有关互联网使用以及金融支付的的法律法规，不从事洗钱、诈骗、以及其他任何破坏社会主义经济秩序的活动；用户使用本服务的行为若有任何违反国家法律法规或侵犯第三方的合法权益时，活动行将保留向公安机关以及国家有关监管部门举报的权利。
+
+
+2.7 用户在使用活动行服务期间，本协议将保持完整的效力。如果用户所发布的活动与法律相抵触或者不符合本协议，活动行可以在不发出任何通知的情况下，随时终止用户的注册用户资格。
+
+
+3.隐私保护
+
+3.1 用户注册活动行账号时，系统会要求其提供个人信息：如姓名、电话、邮箱以及账号密码。若涉及支付行为，用户需提供银行卡等相关付款账户信息，活动行将以加密的形式储存在安全的服务器上。
+
+
+3.2 活动行在用户使用其服务时可能获取的信息：
+
+1)Cookie信息：当用户使用活动行的服务时，系统会将一个或多个Cookie（包含一串字符的小型档案）传送到用户的计算机或其他装置上，以便储存用户的偏好设定，从而提供更好的服务。
+
+2)日志信息：当用户使用活动行的服务时，其服务器会自动记录用户浏览器所传送的信息。服务器日志包含用户的网页请求、因特网通讯协议地址、浏览器类型、浏览器语言、传送请求的日期和时间，以及一个或多个用来识别用户浏览器的Cookie等信息。
+
+3)位置信息：活动行提供基于Google Map开放API的定位服务，无论用户使用哪种设备使用此服务， 活动行皆会主动询问用户是否要提供地理位置相关信息：包含用户的实际位置信息（例如移动装置传送的GPS讯号）以及可用来判断大概位置的信息（例如基地台编号）
+
+4)链接信息：活动行可能会以特定格式显示链接，以此改善定制化内容和推荐的质量以及追踪用户是否可以访问这些链接。
+
+5)用户向活动行联盟网站提供的信息：活动行会通过其他网站提供某些服务。用户提供给这些网站的个人信息可能会传送给活动行，活动行会根据本《隐私权政策》处理此类信息。每个网站所采用的隐私权政策各不相同，建议用户详阅他们的隐私权政策。 "
+                />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

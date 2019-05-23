@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+
+
+    <com.aries.ui.view.title.TitleBarView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"></com.aries.ui.view.title.TitleBarView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+
+        android:orientation="horizontal"
+
+        >
+
+        <LinearLayout
+            android:id="@+id/login_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/dp_14"
+            tools:ignore="RtlHardcoded">
+
+            <ImageView
+                android:layout_width="@dimen/dp_12"
+                android:layout_height="@dimen/dp_20"
+                android:src="@drawable/back_login"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/new_details_act_tital"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dp_100"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_alignBottom="@+id/login_back"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="网络断开"
+            android:textColor="@color/color_333333"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText,RtlHardcoded"
+            android:layout_marginBottom="@dimen/dp_12"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+
+        <!--<ImageView-->
+            <!--android:id="@+id/no_network_images"-->
+            <!--android:layout_width="@dimen/dp_125"-->
+            <!--android:layout_height="@dimen/dp_120"-->
+            <!--android:src="@drawable/no_network"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginTop="@dimen/dp_120"-->
+            <!--/>-->
+
+        <ImageView
+            android:layout_width="@dimen/dp_125"
+            android:layout_height="@dimen/dp_120"
+            android:src="@drawable/network"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/color_333333"
+            android:text="请检查您的网络链接。。。"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_10"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

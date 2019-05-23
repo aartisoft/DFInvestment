@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    >
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/look_catagory_entry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_180"
+            android:visibility="invisible"
+            >
+
+            <ImageView
+                android:id="@+id/entry_data_image"
+                android:layout_width="@dimen/dp_111"
+                android:layout_height="@dimen/dp_105"
+                android:src="@drawable/entry_image"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_15"
+                android:textColor="@color/color_D8D8D8"
+                android:layout_below="@+id/entry_data_image"
+                android:text="你的书架没有新数据"
+                android:layout_centerHorizontal="true"
+                />
+
+        </RelativeLayout>
+
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/look_catagory_act_swipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/look_catagory_act_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

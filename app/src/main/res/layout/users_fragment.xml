@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            tools:ignore="ContentDescription" />
+
+
+        <CheckBox
+            android:id="@+id/user_frag_model"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="@dimen/dp_19"
+            android:layout_marginTop="@dimen/dp_49"
+            android:background="@drawable/user_frag_shape"
+            android:button="@null"
+            android:checked="false"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+
+        <ImageView
+            android:id="@+id/user_frage_message"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_49"
+            android:layout_marginRight="@dimen/dp_19"
+            android:src="@drawable/image_message"
+            android:layout_alignParentRight="true"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+
+
+
+        <ImageView
+            android:id="@+id/user_frage_userimage"
+            android:layout_width="@dimen/dp_67"
+            android:layout_height="@dimen/dp_67"
+            android:src="@drawable/image_user"
+            android:layout_below="@+id/user_frage_message"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_34"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/user_frage_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登录"
+            android:layout_alignTop="@+id/user_frage_userimage"
+            android:layout_toRightOf="@+id/user_frage_userimage"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sp_15"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/user_frage_integral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:layout_below="@+id/user_frage_username"
+            android:layout_toRightOf="@+id/user_frage_userimage"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sp_21"
+            android:layout_marginTop="@dimen/dp_3"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="积分金币"
+            android:layout_below="@+id/user_frage_integral"
+            android:layout_toRightOf="@+id/user_frage_userimage"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sp_11"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/user_frage_userimage"
+            android:layout_marginTop="@dimen/dp_56"
+            >
+
+            <LinearLayout
+                android:id="@+id/user_frag_signin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_54"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/dp_17"
+                    android:layout_height="@dimen/dp_17"
+                    android:src="@drawable/signin_image_second"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="签到记录"
+                    android:textColor="@color/color_505050"
+                    android:layout_marginLeft="@dimen/sp_13"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_8"
+                    android:layout_height="@dimen/dp_15"
+                    android:src="@drawable/back_f0f0f0"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/user_frag_my_look_catagory"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_54"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/dp_17"
+                    android:layout_height="@dimen/dp_17"
+                    android:src="@drawable/my_look"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="我的看单"
+                    android:textColor="@color/color_505050"
+                    android:layout_marginLeft="@dimen/sp_13"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_8"
+                    android:layout_height="@dimen/dp_15"
+                    android:src="@drawable/back_f0f0f0"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/user_frag_my_bookrack"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_54"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/dp_17"
+                    android:layout_height="@dimen/dp_17"
+                    android:src="@drawable/my_book_scre"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="我的书架"
+                    android:textColor="@color/color_505050"
+                    android:layout_marginLeft="@dimen/sp_13"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_8"
+                    android:layout_height="@dimen/dp_15"
+                    android:src="@drawable/back_f0f0f0"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/user_frag_my_message"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_54"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/dp_17"
+                    android:layout_height="@dimen/dp_17"
+                    android:src="@drawable/my_massage"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="我的公告"
+                    android:textColor="@color/color_505050"
+                    android:layout_marginLeft="@dimen/sp_13"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_8"
+                    android:layout_height="@dimen/dp_15"
+                    android:src="@drawable/back_f0f0f0"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/user_frag_my_about_us"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_54"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/dp_17"
+                    android:layout_height="@dimen/dp_17"
+                    android:src="@drawable/about_us"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="关于我们"
+                    android:textColor="@color/color_505050"
+                    android:layout_marginLeft="@dimen/sp_13"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_8"
+                    android:layout_height="@dimen/dp_15"
+                    android:src="@drawable/back_f0f0f0"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/user_frag_my_setting"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_54"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/dp_17"
+                    android:layout_height="@dimen/dp_17"
+                    android:src="@drawable/image_setting"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="设置"
+                    android:textColor="@color/color_505050"
+                    android:layout_marginLeft="@dimen/sp_13"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_8"
+                    android:layout_height="@dimen/dp_15"
+                    android:src="@drawable/back_f0f0f0"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    
+
+    
+</LinearLayout>

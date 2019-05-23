@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    >
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/show_new_image_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            />
+
+        <RelativeLayout
+            android:id="@+id/show_new_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp_20"
+            >
+
+            <LinearLayout
+                android:id="@+id/login_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:padding="@dimen/dp_6"
+                tools:ignore="RtlHardcoded"
+                android:layout_centerVertical="true"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/dp_23"
+                    android:layout_height="@dimen/dp_33"
+                    android:src="@drawable/back_white"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/show_new_message_title"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="入门知识"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:layout_below="@+id/show_new_recycler"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/show_new_message_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_16"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_20" />
+            </LinearLayout>
+        </ScrollView>
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

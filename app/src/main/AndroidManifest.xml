@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tyqhwl.jrqh">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许读取wifi网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_icon_roud"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/MyAppTheme"
+        android:name="com.tyqhwl.jrqh.App"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning,UnusedAttribute">
+        <activity android:name="com.tyqhwl.jrqh.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tyqhwl.jrqh.MainActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.base.KLineActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.GuideActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.login.activity.LoginActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.login.activity.RegisterActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.login.activity.ForgetActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.homepage.activity.CourseDetailActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.seek.activity.ShowNewMessage"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.seek.activity.InversorDetailActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.exercise.actviity.ExerciseActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.exercise.actviity.CompleteAnswerActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.goover.activity.UserCollectActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.goover.activity.AllLessonsActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.homepage.activity.SignInActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.user.activity.UserActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.user.activity.ModificationUserNameActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.user.activity.MyBooksActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.user.activity.AboutUsActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.user.activity.ModificationPswActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.user.activity.SettingActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.homepage.activity.BookDetailActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.homepage.activity.CommentActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.homepage.activity.WriteCommentaryActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.bookrack.activity.SigninsActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.bookrack.activity.SiginDetailActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name="com.tyqhwl.jrqh.user.activity.LookCatagoryActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.user.activity.MyMessageActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.homepage.activity.CatagoryActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.tyqhwl.jrqh.homepage.activity.TopActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="com.tyqhwl.jrqh.base.NoNetWorkActivity"
+            android:launchMode="singleInstance"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <provider
+            android:name="cn.bmob.v3.util.BmobContentProvider"
+            android:authorities="com.tyqhwl.jrqh.BmobContentProvider"
+            tools:ignore="ExportedContentProvider">
+        </provider>
+
+        <!-- 多渠道打包 -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${CHANNEL_VALUE}" />
+        <!-- 解决 9.0 手机的通讯问题 -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/network_security_config" />
+
+
+
+        <!-- 友盟-极光  参数配置  开始 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5ce64a653fc1953184000ea4" />
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="a5de6aecc378e4b71282d053475790be"/>
+    </application>
+
+</manifest>

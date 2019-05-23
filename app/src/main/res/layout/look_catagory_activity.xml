@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70"
+        android:background="@color/colorWhite"
+        android:paddingTop="@dimen/dp_10">
+
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginTop="@dimen/sp_10"
+            android:padding="@dimen/sp_10"
+            tools:ignore="RtlHardcoded">
+
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_25"
+                android:src="@drawable/back_787878"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_22"
+            android:text="看单"
+            android:textColor="@color/color_595959"
+            android:textSize="17sp"
+            tools:ignore="HardcodedText" />
+
+
+        <LinearLayout
+            android:id="@+id/go_book_rack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_marginTop="@dimen/sp_10"
+            android:padding="@dimen/sp_10"
+            tools:ignore="RtlHardcoded"
+            android:layout_alignParentRight="true"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:src="@drawable/seek_image_ischeck"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_13"
+        android:textColor="@color/color_595959"
+        android:paddingLeft="@dimen/dp_20"
+        android:text="所有您正在看单书都在这里哦～-～"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/color_E0E0E0"
+        />
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/look_catagory_entry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_180"
+            android:visibility="invisible"
+            >
+
+            <ImageView
+                android:id="@+id/entry_data_image"
+                android:layout_width="@dimen/dp_111"
+                android:layout_height="@dimen/dp_105"
+                android:src="@drawable/entry_image"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_15"
+                android:textColor="@color/color_D8D8D8"
+                android:layout_below="@+id/entry_data_image"
+                android:text="你的书单没有新数据"
+                android:layout_centerHorizontal="true"
+                />
+
+        </RelativeLayout>
+
+
+        
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/look_catagory_act_swipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/look_catagory_act_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

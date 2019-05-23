@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70"
+        android:background="@color/colorWhite"
+        android:paddingTop="@dimen/dp_10">
+
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginTop="@dimen/sp_10"
+            android:padding="@dimen/sp_10"
+            tools:ignore="RtlHardcoded">
+
+            <ImageView
+                android:id="@+id/homepage_frag_sign_in"
+                android:layout_width="@dimen/dp_15"
+                android:layout_height="@dimen/dp_28"
+                android:src="@drawable/back_787878"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_22"
+            android:text="用户"
+            android:textColor="@color/color_595959"
+            android:textSize="17sp"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/color_E0E0E0"
+        />
+
+    <LinearLayout
+        android:id="@+id/user_act_login_myuser_image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginTop="@dimen/dp_22"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/user_act_login_myuser_image_text"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/color_000000"
+            android:text="我的头像"
+            />
+
+        
+        <ImageView
+            android:id="@+id/user_act_login_myuser_image"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:src="@drawable/image_user"
+            />
+        
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/user_act_login_myusername_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/user_act_login_myusername_text"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/color_000000"
+            android:text="我的昵称"
+            />
+
+
+        <TextView
+            android:id="@+id/user_act_login_myusername_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/color_3B424C"
+            android:background="@null"
+            android:text="暂未设置昵称"
+            />
+
+    </LinearLayout>
+    
+    
+    <TextView
+        android:id="@+id/user_act_unlogin_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_54"
+        android:layout_marginTop="@dimen/dp_60"
+        android:gravity="center"
+        android:textSize="@dimen/sp_15"
+        android:textColor="@color/colorWhite"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:text="退出登录"
+        android:background="@drawable/user_act_unlogin_shape"
+        />
+</LinearLayout>

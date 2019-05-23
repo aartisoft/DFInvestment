@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    >
+
+
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_33"
+        android:layout_marginRight="@dimen/dp_33"
+        android:layout_marginTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_15"
+        >
+
+        
+        <ImageView
+            android:id="@+id/commit_adt_userimage"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44" />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="top"
+            android:layout_toRightOf="@+id/commit_adt_userimage"
+            android:layout_alignTop="@+id/commit_adt_userimage"
+            android:layout_marginLeft="@dimen/dp_16"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+
+                <TextView
+                    android:id="@+id/commit_adt_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_15"
+                    android:textColor="@color/color_7D8596"
+                    android:text="我是用户"
+                    />
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/commit_adt_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dp_15"
+                android:textColor="@color/color_000000"
+                android:text="塑料袋开发技术类飞机上的离开房间的斯洛伐克九色鹿覅及塑料袋开发技术类飞机上的离开房间色了覅就"
+                android:layout_marginTop="@dimen/dp_6"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+    
+    
+
+
+
+</LinearLayout>

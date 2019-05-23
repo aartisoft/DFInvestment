@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    >
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_130"
+        android:background="@drawable/tital_bar_image"
+        android:paddingTop="@dimen/dp_10"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/sp_10"
+            android:layout_marginTop="@dimen/sp_10"
+            android:layout_marginLeft="@dimen/dp_5"
+            tools:ignore="RtlHardcoded">
+
+            <ImageView
+                android:id="@+id/homepage_frag_sign_in"
+                android:layout_width="@dimen/dp_28"
+                android:layout_height="@dimen/dp_28"
+                android:src="@drawable/sign_in_image"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/colorWhite"
+            android:text="学习计划"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_22"
+            tools:ignore="HardcodedText" />
+        <LinearLayout
+            android:id="@+id/server"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/sp_10"
+            android:layout_marginTop="@dimen/sp_10"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_alignParentRight="true"
+            tools:ignore="RtlHardcoded">
+
+            <ImageView
+                android:id="@+id/homepage_frag_server"
+                android:layout_width="@dimen/dp_28"
+                android:layout_height="@dimen/dp_28"
+                android:src="@drawable/server_image"
+                tools:ignore="ContentDescription"
+                android:visibility="invisible"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_84"
+        android:orientation="horizontal"
+        android:layout_marginTop="-42dp"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:background="@drawable/homepage_frag_background"
+        android:gravity="center"
+        tools:ignore="DisableBaselineAlignment">
+
+
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="今日学习"
+                android:textColor="@color/color_7D8596"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_7"
+                >
+
+
+                <TextView
+                    android:id="@+id/homepage_frag_study_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/dp_25"
+                    android:textStyle="bold"
+                    android:text="15"
+                    android:textColor="@color/color_3B424C"
+                    tools:ignore="HardcodedText,SpUsage" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:text="分钟"
+                    android:layout_marginLeft="@dimen/dp_7"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:textColor="@color/color_7D8596"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="学习总时长"
+                android:textColor="@color/color_7D8596"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_7"
+                >
+
+
+                <TextView
+                    android:id="@+id/homepage_frag_max_study_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/dp_25"
+                    android:textStyle="bold"
+                    android:text="2.1"
+                    android:textColor="@color/color_3B424C"
+                    tools:ignore="HardcodedText,SpUsage" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:text="小时"
+                    android:layout_marginLeft="@dimen/dp_7"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:textColor="@color/color_7D8596"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="打卡天数"
+                android:textColor="@color/color_7D8596"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_7"
+                >
+
+
+                <TextView
+                    android:id="@+id/homepage_frag_sign_in_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/dp_25"
+                    android:textStyle="bold"
+                    android:text="4"
+                    android:textColor="@color/color_3B424C"
+                    tools:ignore="HardcodedText,SpUsage" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:text="天"
+                    android:layout_marginLeft="@dimen/dp_7"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:textColor="@color/color_7D8596"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_28"
+        >
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/color_3B424C"
+            android:text="正在学习"
+            tools:ignore="HardcodedText" />
+
+
+
+        <TextView
+            android:id="@+id/homepage_frag_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_13"
+            android:text="查看全部"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_120"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/homepage_frag_study_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_120"
+            android:layout_marginTop="@dimen/dp_10"
+
+            />
+
+        <RelativeLayout
+            android:id="@+id/hp_fragment_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            >
+
+
+            <ImageView
+                android:id="@+id/hp_fragment_image"
+                android:layout_width="23dp"
+                android:layout_height="@dimen/dp_23"
+                android:src="@drawable/my_study_entry"
+                />
+
+            <TextView
+                android:id="@+id/hp_fragment_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_17"
+                android:textColor="@color/color_3B424C"
+                android:text="去学习课程"
+                android:layout_toRightOf="@+id/hp_fragment_image"
+                android:layout_marginLeft="@dimen/dp_17"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_17"
+        android:text="其他课程推荐"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_20"
+        android:textColor="@color/color_3B424C"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_13"
+        android:text="深度好文为你量身定制"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:textColor="@color/color_7D8596"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/homepage_frag_recommend_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_10"
+        />
+</LinearLayout>

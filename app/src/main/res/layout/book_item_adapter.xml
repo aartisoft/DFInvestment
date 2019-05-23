@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    >
+
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginBottom="@dimen/dp_15"
+        tools:ignore="UselessParent">
+        
+        
+        <ImageView
+            android:id="@+id/book_item_adt_image"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_117"
+            android:src="@drawable/tu_jiazai"
+            tools:ignore="ContentDescription"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:id="@+id/book_item_adt_tital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/color_7D8596"
+            android:text="漫步华尔金额"
+            android:layout_below="@id/book_item_adt_image"
+            android:layout_marginTop="@dimen/dp_8"
+            android:maxLines="1"
+            tools:ignore="HardcodedText"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+    
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/color_E0E0E0"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_16"
+            android:paddingRight="@dimen/dp_20"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingBottom="@dimen/dp_16"
+            >
+
+            <ImageView
+                android:id="@+id/look_catagory_adt_image"
+                android:layout_width="@dimen/dp_68"
+                android:layout_height="@dimen/dp_88"
+                android:src="@drawable/image_message"
+                />
+
+            <TextView
+                android:id="@+id/look_catagory_adt_tital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_17"
+                android:textColor="@color/color_000000"
+                android:text="满不会热解"
+                android:layout_toRightOf="@+id/look_catagory_adt_image"
+                android:layout_marginLeft="@dimen/dp_21"
+                android:layout_marginTop="@dimen/dp_8"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_11"
+                android:textColor="@color/color_7D8596"
+                android:layout_below="@+id/look_catagory_adt_tital"
+                android:text="继续阅读"
+                android:layout_alignLeft="@+id/look_catagory_adt_tital"
+                android:layout_marginTop="@dimen/dp_22"
+                />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

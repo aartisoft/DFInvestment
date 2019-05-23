@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:background="@drawable/tital_bar_image"
+        android:paddingTop="@dimen/dp_10">
+
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginTop="@dimen/sp_10"
+            android:padding="@dimen/sp_10"
+            tools:ignore="RtlHardcoded">
+
+            <ImageView
+                android:id="@+id/homepage_frag_sign_in"
+                android:layout_width="@dimen/dp_28"
+                android:layout_height="@dimen/dp_28"
+                android:src="@drawable/back_white"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_22"
+            android:text="我的课程"
+            android:textColor="@color/colorWhite"
+            android:textSize="17sp"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_15"
+        >
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/my_books_activity_swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/my_books_activity_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <RelativeLayout
+            android:id="@+id/go_over_frag_recycler_view_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            >
+
+
+            <ImageView
+                android:id="@+id/recycler_enter_image"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_100"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/recycler_view_image"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/recycler_enter_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recycler_enter_image"
+                android:text="暂无学习记录"
+                android:textColor="@color/color_3B424C"
+                android:textSize="@dimen/sp_15"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_2"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/recycler_enter_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recycler_enter_title"
+                android:text=""
+                android:textColor="@color/color_7D8596"
+                android:textSize="@dimen/sp_13"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_6"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

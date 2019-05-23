@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">commoncore</string>
+
+    <string name="determine">确定</string>
+    <string name="tip_photo_permissions_request">图片选择需要以下权限:\n\n1.访问设备上的照片\n\n2.拍照</string>
+    <string name="tip_photo_permissions_denied">您拒绝了「图片选择」所需要的相关权限!</string>
+    <string name="home_page">首页</string>
+    <string name="optional">自选</string>
+    <string name="school">学堂</string>
+</resources>
