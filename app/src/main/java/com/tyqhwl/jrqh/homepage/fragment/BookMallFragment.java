@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,15 +18,10 @@ import com.tyqhwl.jrqh.R;
 import com.tyqhwl.jrqh.base.AwaitDialog;
 import com.tyqhwl.jrqh.base.BaseFragment;
 import com.tyqhwl.jrqh.base.BaseFragmentAdapter;
-import com.tyqhwl.jrqh.base.IntentSkip;
 import com.tyqhwl.jrqh.base.MyViewPager;
-import com.tyqhwl.jrqh.homepage.activity.CatagoryActivity;
-import com.tyqhwl.jrqh.homepage.activity.TopActivity;
 import com.tyqhwl.jrqh.homepage.presenter.BookItemPresenter;
 import com.tyqhwl.jrqh.homepage.view.BookEntry;
 import com.tyqhwl.jrqh.homepage.view.BookItemView;
-import com.tyqhwl.jrqh.login.activity.LoginActivity;
-import com.tyqhwl.jrqh.user.activity.LookCatagoryActivity;
 
 import java.util.ArrayList;
 
@@ -79,6 +75,24 @@ public class BookMallFragment extends BaseFragment implements BookItemView {
     LinearLayout stockIndexTextviewLayout;
     @BindView(R.id.inland_textview_layout)
     LinearLayout inlandTextviewLayout;
+    @BindView(R.id.book_mall_seek)
+    LinearLayout bookMallSeek;
+    @BindView(R.id.book_mall_catagory)
+    ImageView bookMallCatagory;
+    @BindView(R.id.book_mall_seek_layout)
+    LinearLayout bookMallSeekLayout;
+    @BindView(R.id.book_mall_tital)
+    RelativeLayout bookMallTital;
+    @BindView(R.id.book_mall_first_image)
+    ImageView bookMallFirstImage;
+    @BindView(R.id.book_mall_four_layout)
+    LinearLayout bookMallFourLayout;
+    @BindView(R.id.book_mall_first_layout)
+    LinearLayout bookMallFirstLayout;
+    @BindView(R.id.book_mall_second_layout)
+    LinearLayout bookMallSecondLayout;
+    @BindView(R.id.book_mall_thread_layout)
+    LinearLayout bookMallThreadLayout;
     private AwaitDialog awaitDialog;
 
     public static BookMallFragment newInstance() {
@@ -113,9 +127,9 @@ public class BookMallFragment extends BaseFragment implements BookItemView {
         View rootView = super.onCreateView(inflater, container, savedInstanceState);
         unbinder = ButterKnife.bind(this, rootView);
         bookItemPresenter.getBookData(1, 30, 1);
-//        Glide.with(getContext())
-//                .load(R.drawable.homepage_image)
-//                .into(background);
+        Glide.with(getContext())
+                .load(R.drawable.homepage_firat_image)
+                .into(bookMallFirstImage);
         return rootView;
     }
 

@@ -40,6 +40,7 @@
                 >
 
                 <LinearLayout
+                    android:id="@+id/book_mall_seek"
                     android:layout_width="@dimen/dp_0"
                     android:layout_weight="1"
                     android:layout_height="@dimen/dp_35"
@@ -58,6 +59,7 @@
                 </LinearLayout>
                 
                 <ImageView
+                    android:id="@+id/book_mall_catagory"
                     android:layout_width="@dimen/dp_24"
                     android:layout_height="@dimen/dp_24"
                     android:layout_marginLeft="@dimen/dp_27"
@@ -320,6 +322,7 @@
 
 
             <LinearLayout
+                android:id="@+id/book_mall_four_layout"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_60"
                 android:background="@color/color_DBC29C"
@@ -391,6 +394,7 @@
                 >
 
                 <LinearLayout
+                    android:id="@+id/book_mall_first_layout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -432,6 +436,7 @@
                     >
 
                     <LinearLayout
+                        android:id="@+id/book_mall_second_layout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -467,6 +472,7 @@
                             />
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/book_mall_thread_layout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
