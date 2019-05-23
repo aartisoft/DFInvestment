@@ -11,6 +11,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.avos.avoscloud.AVUser;
 import com.tyqhwl.jrqh.base.BaseActivity;
 import com.tyqhwl.jrqh.base.EventBusTag;
@@ -54,17 +55,27 @@ public class MainActivity extends BaseActivity implements LoginView {
     private final String TAG0 = "tag0";
     private final String TAG1 = "tag1";
     private final String TAG2 = "tag2";
+    private final String TAG3 = "tag3";
+    @BindView(R.id.acct_main_circle_checkbox)
+    CheckBox acctMainCircleCheckbox;
+    @BindView(R.id.acct_main_circle_text)
+    TextView acctMainCircleText;
+    @BindView(R.id.acct_main_circle_layout)
+    LinearLayout acctMainCircleLayout;
 
     private BookMallFragment homePageFragment;
     private BookRackFragment seekFragment;
     private GoOverFragment goOverFragment;
     private UsersFragment userFragmetn;
     private FragmentManager fragmentManager;
+
     @Override
     public int getXMLLayout() {
         return R.layout.activity_main;
     }
+
     private LoginHttps loginHttps = new LoginHttps(this, this);
+
     @Override
     public void initView() {
 
@@ -139,8 +150,6 @@ public class MainActivity extends BaseActivity implements LoginView {
     }
 
 
-
-
     @Override
     public boolean isEventOrBindInit() {
         return true;
@@ -148,9 +157,9 @@ public class MainActivity extends BaseActivity implements LoginView {
 
 
     @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onEventThreadMain(Object o){
+    public void onEventThreadMain(Object o) {
 //        Toast.makeText(this , "wei执行" , Toast.LENGTH_SHORT).show();
-        if (o.equals(EventBusTag.INTENT_BOOK_MALL)){
+        if (o.equals(EventBusTag.INTENT_BOOK_MALL)) {
 //            Toast.makeText(this , "执行" , Toast.LENGTH_SHORT).show();
             showFragment(TAG0);
             showIndex(0);
@@ -158,36 +167,35 @@ public class MainActivity extends BaseActivity implements LoginView {
     }
 
 
-
     @OnClick({R.id.acct_main_homepage_checkbox, R.id.acct_main_homepage_layout,
             R.id.acct_main_market_checkbox, R.id.acct_main_market_layout,
-             R.id.acct_main_user_checkbox, R.id.acct_main_user_layout})
+            R.id.acct_main_user_checkbox, R.id.acct_main_user_layout})
     public void onViewClickeds(View view) {
         switch (view.getId()) {
             case R.id.acct_main_homepage_checkbox:
-                    showIndex(0);
-                    showFragment(TAG0);
+                showIndex(0);
+                showFragment(TAG0);
                 break;
             case R.id.acct_main_homepage_layout:
-                    showIndex(0);
-                    showFragment(TAG0);
+                showIndex(0);
+                showFragment(TAG0);
                 break;
             case R.id.acct_main_market_checkbox:
-                    showIndex(1);
-                    showFragment(TAG1);
+                showIndex(1);
+                showFragment(TAG1);
                 break;
             case R.id.acct_main_market_layout:
-                    showIndex(1);
-                    showFragment(TAG1);
+                showIndex(1);
+                showFragment(TAG1);
                 break;
 
             case R.id.acct_main_user_checkbox:
-                    showIndex(2);
-                    showFragment(TAG2);
+                showIndex(2);
+                showFragment(TAG2);
                 break;
             case R.id.acct_main_user_layout:
-                    showIndex(2);
-                    showFragment(TAG2);
+                showIndex(2);
+                showFragment(TAG2);
                 break;
         }
     }
@@ -201,7 +209,7 @@ public class MainActivity extends BaseActivity implements LoginView {
         acctMainMarketText.setTextColor(Color.parseColor("#4A4A4A"));
         acctMainUserText.setTextColor(Color.parseColor("#4A4A4A"));
 
-        switch (index){
+        switch (index) {
             case 0:
                 acctMainHomepageCheckbox.setChecked(true);
                 acctMainHomepageText.setTextColor(Color.parseColor("#17B2AA"));
@@ -221,13 +229,13 @@ public class MainActivity extends BaseActivity implements LoginView {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.acct_main_homepage_text:
-                    showIndex(0);
-                    showFragment(TAG0);
+                showIndex(0);
+                showFragment(TAG0);
                 break;
             case R.id.acct_main_market_text:
 
-                    showIndex(1);
-                    showFragment(TAG1);
+                showIndex(1);
+                showFragment(TAG1);
 
                 break;
 //            case R.id.acct_main_information_text:
@@ -237,15 +245,15 @@ public class MainActivity extends BaseActivity implements LoginView {
 //
 //                break;
             case R.id.acct_main_user_text:
-                    showIndex(2);
-                    showFragment(TAG2);
+                showIndex(2);
+                showFragment(TAG2);
                 break;
         }
     }
 
     @Override
     public void loginSuccess(AVUser avUser) {
-        Toast.makeText(this , "已登录" , Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "已登录", Toast.LENGTH_SHORT).show();
         ApplicationStatic.setUserLoginState(true);
         EventBus.getDefault().post(EventBusTag.LOGIN_SUCCESS);
     }

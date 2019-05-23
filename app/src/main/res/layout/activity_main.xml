@@ -48,8 +48,8 @@
 
                 <CheckBox
                     android:id="@+id/acct_main_homepage_checkbox"
-                    android:layout_width="@dimen/dp_30"
-                    android:layout_height="@dimen/dp_30"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
                     android:button="@null"
                     android:background="@drawable/main_checkbox_homepage_shape"
                     android:checked="true"
@@ -81,8 +81,8 @@
 
                 <CheckBox
                     android:id="@+id/acct_main_market_checkbox"
-                    android:layout_width="@dimen/dp_30"
-                    android:layout_height="@dimen/dp_30"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
                     android:button="@null"
                     android:background="@drawable/main_checkbox_market_shape"
                     android:checked="false"
@@ -98,7 +98,35 @@
                     tools:ignore="HardcodedText" />
 
             </LinearLayout>
+            <LinearLayout
+                android:id="@+id/acct_main_circle_layout"
+                android:layout_width="@dimen/dp_0"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
 
+
+                <CheckBox
+                    android:id="@+id/acct_main_circle_checkbox"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:button="@null"
+                    android:background="@drawable/main_checkbox_circle_shape"
+                    android:checked="false"
+                    />
+                <TextView
+                    android:id="@+id/acct_main_circle_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_4A4A4A"
+                    android:text="圈子"
+                    android:textSize="@dimen/sp_13"
+                    android:layout_marginTop="@dimen/dp_2"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
             <LinearLayout
                 android:id="@+id/acct_main_user_layout"
                 android:layout_width="@dimen/dp_0"
@@ -111,8 +139,8 @@
 
                 <CheckBox
                     android:id="@+id/acct_main_user_checkbox"
-                    android:layout_width="@dimen/dp_30"
-                    android:layout_height="@dimen/dp_30"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
                     android:button="@null"
                     android:background="@drawable/main_checkbox_user_shape"
                     android:checked="false"

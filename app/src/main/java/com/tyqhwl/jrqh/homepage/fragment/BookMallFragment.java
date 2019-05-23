@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.tyqhwl.jrqh.ApplicationStatic;
@@ -17,6 +18,7 @@ import com.tyqhwl.jrqh.base.AwaitDialog;
 import com.tyqhwl.jrqh.base.BaseFragment;
 import com.tyqhwl.jrqh.base.BaseFragmentAdapter;
 import com.tyqhwl.jrqh.base.IntentSkip;
+import com.tyqhwl.jrqh.base.MyViewPager;
 import com.tyqhwl.jrqh.homepage.activity.CatagoryActivity;
 import com.tyqhwl.jrqh.homepage.activity.TopActivity;
 import com.tyqhwl.jrqh.homepage.presenter.BookItemPresenter;
@@ -58,17 +60,17 @@ public class BookMallFragment extends BaseFragment implements BookItemView {
     LinearLayout bookMallFragSeek;
     @BindView(R.id.study_fragment_tital)
     LinearLayout studyFragmentTital;
-    @BindView(R.id.book_mall_frag_catogory)
-    LinearLayout bookMallFragCatogory;
-    @BindView(R.id.book_mall_frag_top)
-    LinearLayout bookMallFragTop;
-    @BindView(R.id.book_mall_frag_look_top)
-    LinearLayout bookMallFragLookTop;
+    //    @BindView(R.id.book_mall_frag_catogory)
+//    LinearLayout bookMallFragCatogory;
+//    @BindView(R.id.book_mall_frag_top)
+//    LinearLayout bookMallFragTop;
+//    @BindView(R.id.book_mall_frag_look_top)
+//    LinearLayout bookMallFragLookTop;
     @BindView(R.id.book_mall_viewpager)
-    ViewPager bookMallViewpager;
+    MyViewPager bookMallViewpager;
     Unbinder unbinder;
-    @BindView(R.id.background)
-    ImageView background;
+    //    @BindView(R.id.background)
+//    ImageView background;
     @BindView(R.id.optional_textview_layout)
     LinearLayout optionalTextviewLayout;
     @BindView(R.id.international_layout)
@@ -78,6 +80,7 @@ public class BookMallFragment extends BaseFragment implements BookItemView {
     @BindView(R.id.inland_textview_layout)
     LinearLayout inlandTextviewLayout;
     private AwaitDialog awaitDialog;
+
     public static BookMallFragment newInstance() {
 
         Bundle args = new Bundle();
@@ -110,9 +113,9 @@ public class BookMallFragment extends BaseFragment implements BookItemView {
         View rootView = super.onCreateView(inflater, container, savedInstanceState);
         unbinder = ButterKnife.bind(this, rootView);
         bookItemPresenter.getBookData(1, 30, 1);
-        Glide.with(getContext())
-                .load(R.drawable.homepage_image)
-                .into(background);
+//        Glide.with(getContext())
+//                .load(R.drawable.homepage_image)
+//                .into(background);
         return rootView;
     }
 
@@ -122,31 +125,30 @@ public class BookMallFragment extends BaseFragment implements BookItemView {
         unbinder.unbind();
     }
 
-    @OnClick({ R.id.book_mall_frag_seek,
-            R.id.study_fragment_tital, R.id.book_mall_frag_catogory, R.id.book_mall_frag_top,
-            R.id.book_mall_frag_look_top, R.id.book_mall_viewpager})
+    @OnClick({R.id.book_mall_frag_seek,
+            R.id.study_fragment_tital, R.id.book_mall_viewpager})
     public void onViewClickeds(View view) {
         switch (view.getId()) {
             case R.id.book_mall_frag_seek:
                 break;
             case R.id.study_fragment_tital:
                 break;
-            case R.id.book_mall_frag_catogory:
-                //分类
-                IntentSkip.startIntent(getActivity() , new CatagoryActivity() , null);
-                break;
-            case R.id.book_mall_frag_top:
-                //榜单
-                IntentSkip.startIntent(getActivity() , new TopActivity() , null);
-                break;
-            case R.id.book_mall_frag_look_top:
-                //看单
-                if (ApplicationStatic.getUserLoginState()){
-                    IntentSkip.startIntent(getActivity() , new LookCatagoryActivity() , null);
-                }else {
-                    IntentSkip.startIntent(getActivity() , new LoginActivity() , null);
-                }
-                break;
+//            case R.id.book_mall_frag_catogory:
+//                //分类
+//                IntentSkip.startIntent(getActivity() , new CatagoryActivity() , null);
+//                break;
+//            case R.id.book_mall_frag_top:
+//                //榜单
+//                IntentSkip.startIntent(getActivity() , new TopActivity() , null);
+//                break;
+//            case R.id.book_mall_frag_look_top:
+//                //看单
+//                if (ApplicationStatic.getUserLoginState()){
+//                    IntentSkip.startIntent(getActivity() , new LookCatagoryActivity() , null);
+//                }else {
+//                    IntentSkip.startIntent(getActivity() , new LoginActivity() , null);
+//                }
+//                break;
         }
     }
 
@@ -156,6 +158,7 @@ public class BookMallFragment extends BaseFragment implements BookItemView {
     }
 
     private void initViewPager(ArrayList<BookEntry> arrayList) {
+        Toast.makeText(getActivity(), arrayList.size() + "###", Toast.LENGTH_LONG).show();
         ApplicationStatic.saveBookAllData(arrayList);
         ArrayList<BookEntry> firstData = new ArrayList<>();
         ArrayList<BookEntry> secondData = new ArrayList<>();
