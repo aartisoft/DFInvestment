@@ -11,7 +11,7 @@ public class InversorEntry implements Serializable {
     public String time;
     public String read;
     public boolean isCheck;
-
+    public String image;
     public InversorEntry(String title, String summary, String thumb, int post_id, String time) {
         this.title = title;
         this.summary = summary;
@@ -41,6 +41,17 @@ public class InversorEntry implements Serializable {
         this.isCheck = isCheck;
     }
 
+
+    public InversorEntry(String title, String summary, String thumb, int post_id, String time, String read, boolean isCheck, String image) {
+        this.title = title;
+        this.summary = summary;
+        this.thumb = thumb;
+        this.post_id = post_id;
+        this.time = time;
+        this.read = read;
+        this.isCheck = isCheck;
+        this.image = image;
+    }
 
     public boolean isCheck() {
         return isCheck;
@@ -98,6 +109,14 @@ public class InversorEntry implements Serializable {
         this.read = read;
     }
 
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 
     @Override
     public String toString() {

@@ -135,8 +135,6 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 >
-
-
                 <CheckBox
                     android:id="@+id/acct_main_user_checkbox"
                     android:layout_width="@dimen/dp_25"

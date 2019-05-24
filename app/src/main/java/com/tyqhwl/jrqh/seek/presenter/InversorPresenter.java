@@ -11,11 +11,9 @@ import com.tyqhwl.jrqh.seek.view.InversorView;
 import com.tyqhwl.jrqh.seek.view.SaveNewMessageView;
 import com.vise.xsnow.http.ViseHttp;
 import com.vise.xsnow.http.callback.ACallback;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,6 +30,7 @@ public class InversorPresenter {
     public InversorPresenter(SaveNewMessageView saveNewMessageView) {
         this.saveNewMessageView = saveNewMessageView;
     }
+
 
     public void getInversorData(String tags, int page) {
         ViseHttp.GET("http://data.fk7h.com/yapi/news_letter/gelonghui_list?tags=sd&page=1&size=10")
@@ -53,8 +52,10 @@ public class InversorPresenter {
                                     String thumb = jsonObject.getString("thumb");
                                     String read = jsonObject.getString("read");
                                     String time = jsonObject.getString("time");
+                                    String like = jsonObject.getString("like");
                                     int post_id = jsonObject.getInt("post_id");
-                                    arrayList.add(new InversorEntry(title, summary, thumb, post_id, time, read , false));
+                                    String image = jsonObject.getString("thumb");
+                                    arrayList.add(new InversorEntry(title, summary, thumb, post_id, time,"", false ,image));
                                 }
                             } catch (JSONException e) {
                                 e.printStackTrace();
@@ -71,6 +72,60 @@ public class InversorPresenter {
                     @Override
                     public void onFail(int errCode, String errMsg) {
                         inversorView.getInversorFail(errMsg);
+                    }
+                });
+    }
+    public void getInversorDataSecond(String tags, int page) {
+        if (page == 1){
+            inversorView.showAwait();
+        }
+        ViseHttp.GET("http://data.fk7h.com/yapi/news_letter/gelonghui_list?tags=sd&page=1&size=10")
+                .addParam("tags", tags)
+                .addParam("page", page + "")
+                .addParam("size", "10")
+                .request(new ACallback<String>() {
+                    @Override
+                    public void onSuccess(String data) {
+                        if (data != null) {
+                            JSONArray jsonArray = null;
+                            ArrayList<InversorEntry> arrayList = new ArrayList<>();
+                            try {
+                                jsonArray = new JSONObject(data).getJSONArray("data");
+                                for (int i = 0; i < jsonArray.length(); i++) {
+                                    JSONObject jsonObject = jsonArray.getJSONObject(i);
+                                    String title = jsonObject.getString("title");
+                                    String summary = jsonObject.getString("summary");
+                                    String thumb = jsonObject.getString("thumb");
+                                    String read = jsonObject.getString("read");
+                                    String time = jsonObject.getString("time");
+                                    String like = jsonObject.getString("like");
+                                    int post_id = jsonObject.getInt("post_id");
+                                    String image = jsonObject.getString("thumb");
+                                    arrayList.add(new InversorEntry(title, summary, thumb, post_id, time,"", false  , image));
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                            if (page == 1){
+                                inversorView.finishAwait();
+                            }
+                            inversorView.getInversorSuccess(arrayList);
+                        } else {
+                            ArrayList<InversorEntry> arrayList = new ArrayList<>();
+                            inversorView.getInversorSuccess(arrayList);
+                            if (page == 1){
+                                inversorView.finishAwait();
+                            }
+                        }
+
+                    }
+
+                    @Override
+                    public void onFail(int errCode, String errMsg) {
+                        inversorView.getInversorFail(errMsg);
+                        if (page == 1){
+                            inversorView.finishAwait();
+                        }
                     }
                 });
     }

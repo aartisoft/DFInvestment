@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -39,10 +40,8 @@ import butterknife.Unbinder;
  * 2019-05-21
  */
 public class BookRackFragment extends BaseFragment {
-    @BindView(R.id.book_rack_signin_image)
-    ImageView bookRackSigninImage;
-    @BindView(R.id.book_rack_seek_image)
-    ImageView bookRackSeekImage;
+
+
     @BindView(R.id.book_detail_image)
     ImageView bookDetailImage;
     @BindView(R.id.book_detail_tital)
@@ -51,10 +50,11 @@ public class BookRackFragment extends BaseFragment {
     LinearLayout continueReading;
     @BindView(R.id.book_rack_frag_recyclerview)
     RecyclerView bookRackFragRecyclerview;
+    @BindView(R.id.book_rack_tital)
+    RelativeLayout bookRackTital;
     Unbinder unbinder;
     ArrayList<BookEntry> data = new ArrayList<BookEntry>();
-    @BindView(R.id.background)
-    ImageView background;
+
     private BookItemAdapter bookItemAdapter;
 
     public static BookRackFragment newInstance() {
@@ -102,9 +102,9 @@ public class BookRackFragment extends BaseFragment {
         View rootView = super.onCreateView(inflater, container, savedInstanceState);
         unbinder = ButterKnife.bind(this, rootView);
         initRecyclerView();
-        Glide.with(getActivity())
-                .load(R.drawable.user_background)
-                .into(background);
+//        Glide.with(getActivity())
+//                .load(R.drawable.user_background)
+//                .into(background);
         return rootView;
     }
 
@@ -112,7 +112,7 @@ public class BookRackFragment extends BaseFragment {
         data.clear();
         data.addAll(ApplicationStatic.getBookAllData());
         Log.e("show", data.size() + "SSSSss");
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getActivity(), 4);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getActivity(), 3);
         bookItemAdapter = new BookItemAdapter(data, getActivity(), getActivity());
         bookRackFragRecyclerview.setLayoutManager(layoutManager);
         bookRackFragRecyclerview.setAdapter(bookItemAdapter);
@@ -124,28 +124,30 @@ public class BookRackFragment extends BaseFragment {
         unbinder.unbind();
     }
 
-    @OnClick({R.id.book_rack_signin_image, R.id.book_rack_seek_image, R.id.book_detail_image,
+    @OnClick({  R.id.book_detail_image,R.id.book_rack_tital,
             R.id.book_detail_tital, R.id.continue_reading, R.id.book_rack_frag_recyclerview})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.book_rack_signin_image:
-                //签到
-                if (ApplicationStatic.getUserLoginState()) {
-                    IntentSkip.startIntent(getActivity(), new SigninsActivity(), null);
-                } else {
-                    IntentSkip.startIntent(getActivity(), new LoginActivity(), null);
-                }
-
-                break;
-            case R.id.book_rack_seek_image:
-                break;
             case R.id.book_detail_image:
                 break;
             case R.id.book_detail_tital:
                 break;
+            case R.id.book_rack_tital:
+                //跳转到书籍详情页面
+                if (ApplicationStatic.getUserLoginState()){
+                    IntentSkip.startIntent(getActivity(), new BookDetailActivity(), data.get(0));
+                }else {
+                    IntentSkip.startIntent(getActivity(), new LoginActivity(), null);
+                }
+
+                break;
             case R.id.continue_reading:
                 //跳转到书籍详情页面
-                IntentSkip.startIntent(getActivity(), new BookDetailActivity(), data.get(0));
+                if (ApplicationStatic.getUserLoginState()){
+                    IntentSkip.startIntent(getActivity(), new BookDetailActivity(), data.get(0));
+                }else {
+                    IntentSkip.startIntent(getActivity(), new LoginActivity(), null);
+                }
                 break;
         }
     }

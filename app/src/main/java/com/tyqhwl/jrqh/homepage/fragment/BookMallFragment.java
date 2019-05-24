@@ -65,8 +65,6 @@ public class BookMallFragment extends BaseFragment implements BookItemView {
     @BindView(R.id.book_mall_viewpager)
     MyViewPager bookMallViewpager;
     Unbinder unbinder;
-    //    @BindView(R.id.background)
-//    ImageView background;
     @BindView(R.id.optional_textview_layout)
     LinearLayout optionalTextviewLayout;
     @BindView(R.id.international_layout)
@@ -117,9 +115,7 @@ public class BookMallFragment extends BaseFragment implements BookItemView {
     }
 
     @Override
-    public void initView() {
-
-    }
+    public void initView() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -128,7 +124,7 @@ public class BookMallFragment extends BaseFragment implements BookItemView {
         unbinder = ButterKnife.bind(this, rootView);
         bookItemPresenter.getBookData(1, 30, 1);
         Glide.with(getContext())
-                .load(R.drawable.homepage_firat_image)
+                .load(R.drawable.homepage_background_image)
                 .into(bookMallFirstImage);
         return rootView;
     }
@@ -147,22 +143,7 @@ public class BookMallFragment extends BaseFragment implements BookItemView {
                 break;
             case R.id.study_fragment_tital:
                 break;
-//            case R.id.book_mall_frag_catogory:
-//                //分类
-//                IntentSkip.startIntent(getActivity() , new CatagoryActivity() , null);
-//                break;
-//            case R.id.book_mall_frag_top:
-//                //榜单
-//                IntentSkip.startIntent(getActivity() , new TopActivity() , null);
-//                break;
-//            case R.id.book_mall_frag_look_top:
-//                //看单
-//                if (ApplicationStatic.getUserLoginState()){
-//                    IntentSkip.startIntent(getActivity() , new LookCatagoryActivity() , null);
-//                }else {
-//                    IntentSkip.startIntent(getActivity() , new LoginActivity() , null);
-//                }
-//                break;
+
         }
     }
 
@@ -172,7 +153,7 @@ public class BookMallFragment extends BaseFragment implements BookItemView {
     }
 
     private void initViewPager(ArrayList<BookEntry> arrayList) {
-        Toast.makeText(getActivity(), arrayList.size() + "###", Toast.LENGTH_LONG).show();
+//        Toast.makeText(getActivity(), arrayList.size() + "###", Toast.LENGTH_LONG).show();
         ApplicationStatic.saveBookAllData(arrayList);
         ArrayList<BookEntry> firstData = new ArrayList<>();
         ArrayList<BookEntry> secondData = new ArrayList<>();
@@ -204,9 +185,7 @@ public class BookMallFragment extends BaseFragment implements BookItemView {
         bookMallViewpager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int i, float v, int i1) {
-
             }
-
             @Override
             public void onPageSelected(int i) {
                 showIndex(i);
@@ -214,7 +193,6 @@ public class BookMallFragment extends BaseFragment implements BookItemView {
 
             @Override
             public void onPageScrollStateChanged(int i) {
-
             }
         });
     }

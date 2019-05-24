@@ -5,6 +5,7 @@
     <color name="colorAccent">#D81B60</color>
     <color name="defaultBackground">#F7f7f7</color>
     <color name="color_FFFFFF">#FFFFFF</color>
+    <color name="color_99FFFFFF">#99FFFFFF</color>
     <color name="color_5242FF">#5242ff</color>
     <color name="color_707070">#707070</color>
     <color name="color_333333">#333333</color>
@@ -65,7 +66,9 @@
     <color name="color_2C4B8B">#2C4B8B</color>
     <color name="color_6BCEC0">#6BCEC0</color>
     <color name="color_3B424C">#3B424C</color>
+    <color name="color_343434">#343434</color>
     <color name="color_7D8596">#7D8596</color>
+    <color name="color_447D8596">#447D8596</color>
     <color name="color_5BD4AE">#5BD4AE</color>
     <color name="color_E7c9a4">#E7c9a4</color>
     <color name="color_5A4E3D">#5A4E3D</color>
@@ -99,5 +102,8 @@
     <color name="color_F59123">#F59123</color>
     <color name="color_DCC7AA">#DCC7AA</color>
     <color name="color_F5F5F5">#f5f5f5</color>
+    <color name="color_2B3779">#2B3779</color>
+    <color name="color_662B3779">#662B3779</color>
+    <color name="color_F4F4F4">#f4f4f4</color>
 
 </resources>

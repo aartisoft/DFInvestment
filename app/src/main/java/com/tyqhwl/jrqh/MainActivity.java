@@ -18,8 +18,11 @@ import com.tyqhwl.jrqh.base.EventBusTag;
 import com.tyqhwl.jrqh.bookrack.fragment.BookRackFragment;
 import com.tyqhwl.jrqh.goover.fragment.GoOverFragment;
 import com.tyqhwl.jrqh.homepage.fragment.BookMallFragment;
+import com.tyqhwl.jrqh.homepage.fragment.CircleFragment;
+import com.tyqhwl.jrqh.homepage.presenter.MyAttentionPresenter;
 import com.tyqhwl.jrqh.login.presenter.LoginHttps;
 import com.tyqhwl.jrqh.login.view.LoginView;
+import com.tyqhwl.jrqh.user.fragment.UserFragment;
 import com.tyqhwl.jrqh.user.fragment.UsersFragment;
 
 import org.greenrobot.eventbus.EventBus;
@@ -65,10 +68,10 @@ public class MainActivity extends BaseActivity implements LoginView {
 
     private BookMallFragment homePageFragment;
     private BookRackFragment seekFragment;
-    private GoOverFragment goOverFragment;
-    private UsersFragment userFragmetn;
+    private CircleFragment circleFragment;
+//    private GoOverFragment goOverFragment;
+    private UserFragment userFragmetn;
     private FragmentManager fragmentManager;
-
     @Override
     public int getXMLLayout() {
         return R.layout.activity_main;
@@ -105,8 +108,8 @@ public class MainActivity extends BaseActivity implements LoginView {
         FragmentTransaction ft = fragmentManager.beginTransaction();
         ft.add(R.id.act_main_frame_layout, homePageFragment = BookMallFragment.newInstance(), TAG0);
         ft.add(R.id.act_main_frame_layout, seekFragment = BookRackFragment.newInstance(), TAG1);
-//        ft.add(R.id.act_main_frame_layout, goOverFragment = GoOverFragment.newInstance(), TAG2);
-        ft.add(R.id.act_main_frame_layout, userFragmetn = UsersFragment.newInstance(), TAG2);
+        ft.add(R.id.act_main_frame_layout, circleFragment = CircleFragment.newInstance(), TAG2);
+        ft.add(R.id.act_main_frame_layout, userFragmetn = UserFragment.newInstance(), TAG2);
         ft.commit();
         showFragment(TAG0);
         showIndex(0);
@@ -122,25 +125,25 @@ public class MainActivity extends BaseActivity implements LoginView {
             case TAG0:
                 ft.show(homePageFragment);
                 ft.hide(seekFragment);
-//                ft.hide(goOverFragment);
+                ft.hide(circleFragment);
                 ft.hide(userFragmetn);
                 break;
             case TAG1:
                 ft.show(seekFragment);
                 ft.hide(homePageFragment);
-//                ft.hide(goOverFragment);
+                ft.hide(circleFragment);
                 ft.hide(userFragmetn);
                 break;
-//            case TAG2:
-//                ft.show(goOverFragment);
-//                ft.hide(seekFragment);
-//                ft.hide(homePageFragment);
-//                ft.hide(userFragmetn);
-//                break;
             case TAG2:
+                ft.show(circleFragment);
+                ft.hide(seekFragment);
+                ft.hide(homePageFragment);
+                ft.hide(userFragmetn);
+                break;
+            case TAG3:
                 ft.show(userFragmetn);
                 ft.hide(seekFragment);
-//                ft.hide(goOverFragment);
+                ft.hide(circleFragment);
                 ft.hide(homePageFragment);
                 break;
 
@@ -169,7 +172,8 @@ public class MainActivity extends BaseActivity implements LoginView {
 
     @OnClick({R.id.acct_main_homepage_checkbox, R.id.acct_main_homepage_layout,
             R.id.acct_main_market_checkbox, R.id.acct_main_market_layout,
-            R.id.acct_main_user_checkbox, R.id.acct_main_user_layout})
+            R.id.acct_main_user_checkbox, R.id.acct_main_user_layout,
+            R.id.acct_main_circle_checkbox,R.id.acct_main_circle_layout})
     public void onViewClickeds(View view) {
         switch (view.getId()) {
             case R.id.acct_main_homepage_checkbox:
@@ -188,14 +192,21 @@ public class MainActivity extends BaseActivity implements LoginView {
                 showIndex(1);
                 showFragment(TAG1);
                 break;
-
-            case R.id.acct_main_user_checkbox:
+            case R.id.acct_main_circle_checkbox:
                 showIndex(2);
                 showFragment(TAG2);
                 break;
-            case R.id.acct_main_user_layout:
+            case R.id.acct_main_circle_layout:
                 showIndex(2);
                 showFragment(TAG2);
+                break;
+            case R.id.acct_main_user_checkbox:
+                showIndex(3);
+                showFragment(TAG3);
+                break;
+            case R.id.acct_main_user_layout:
+                showIndex(3);
+                showFragment(TAG3);
                 break;
         }
     }
@@ -205,9 +216,11 @@ public class MainActivity extends BaseActivity implements LoginView {
         acctMainHomepageCheckbox.setChecked(false);
         acctMainMarketCheckbox.setChecked(false);
         acctMainUserCheckbox.setChecked(false);
+        acctMainCircleCheckbox.setChecked(false);
         acctMainHomepageText.setTextColor(Color.parseColor("#4A4A4A"));
         acctMainMarketText.setTextColor(Color.parseColor("#4A4A4A"));
         acctMainUserText.setTextColor(Color.parseColor("#4A4A4A"));
+        acctMainCircleText.setTextColor(Color.parseColor("#4A4A4A"));
 
         switch (index) {
             case 0:
@@ -219,13 +232,18 @@ public class MainActivity extends BaseActivity implements LoginView {
                 acctMainMarketText.setTextColor(Color.parseColor("#17B2AA"));
                 break;
             case 2:
+                acctMainCircleCheckbox.setChecked(true);
+                acctMainCircleText.setTextColor(Color.parseColor("#17B2AA"));
+                break;
+            case 3:
                 acctMainUserCheckbox.setChecked(true);
                 acctMainUserText.setTextColor(Color.parseColor("#17B2AA"));
                 break;
         }
     }
 
-    @OnClick({R.id.acct_main_homepage_text, R.id.acct_main_market_text, R.id.acct_main_user_text})
+    @OnClick({R.id.acct_main_homepage_text, R.id.acct_main_market_text,
+            R.id.acct_main_user_text,R.id.acct_main_circle_text})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.acct_main_homepage_text:
@@ -233,20 +251,16 @@ public class MainActivity extends BaseActivity implements LoginView {
                 showFragment(TAG0);
                 break;
             case R.id.acct_main_market_text:
-
                 showIndex(1);
                 showFragment(TAG1);
-
                 break;
-//            case R.id.acct_main_information_text:
-//
-//                    showIndex(2);
-//                    showFragment(TAG2);
-//
-//                break;
-            case R.id.acct_main_user_text:
+            case R.id.acct_main_circle_text:
                 showIndex(2);
                 showFragment(TAG2);
+                break;
+            case R.id.acct_main_user_text:
+                showIndex(3);
+                showFragment(TAG3);
                 break;
         }
     }
