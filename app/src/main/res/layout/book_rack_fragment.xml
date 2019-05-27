@@ -39,6 +39,7 @@
                 />
             
             <ImageView
+                android:id="@+id/book_rack_frag_seek"
                 android:layout_width="@dimen/dp_16"
                 android:layout_height="@dimen/dp_16"
                 android:src="@drawable/seek_image"

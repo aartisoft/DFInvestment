@@ -126,10 +126,10 @@ public class MyBookRackActivity extends BaseActivity implements MyBookRackView {
     @Override
     public void geMyBookRackFail(String msg) {
         if (isSwipe) {
-//            Toast.makeText(this, "刷新完成", Toast.LENGTH_SHORT).show();
             lookCatagoryActSwipe.setRefreshing(false);
             isSwipe = false;
         }
+        lookCatagoryEntry.setVisibility(View.VISIBLE);
     }
 
     @Override

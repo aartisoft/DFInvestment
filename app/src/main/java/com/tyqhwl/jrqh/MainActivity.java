@@ -167,7 +167,11 @@ public class MainActivity extends BaseActivity implements LoginView {
         if (o.equals(EventBusTag.MY_ATTENTION)) {
             showFragment(TAG2);
             showIndex(2);
+        }
 
+        if (o.equals(EventBusTag.INTENT_USER)) {
+            showFragment(TAG3);
+            showIndex(3);
         }
     }
 

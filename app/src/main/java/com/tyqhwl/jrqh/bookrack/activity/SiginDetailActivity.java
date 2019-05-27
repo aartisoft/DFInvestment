@@ -20,8 +20,6 @@ import butterknife.OnClick;
 public class SiginDetailActivity extends BaseActivity {
     @BindView(R.id.sigins_activity_back)
     ImageView siginsActivityBack;
-    @BindView(R.id.background)
-    ImageView background;
 
     @Override
     public int getXMLLayout() {
@@ -38,9 +36,7 @@ public class SiginDetailActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         // TODO: add setContentView(...) invocation
         ButterKnife.bind(this);
-        Glide.with(this)
-                .load(R.drawable.sign_in_background)
-                .into(background);
+
     }
 
     @OnClick(R.id.sigins_activity_back)

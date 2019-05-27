@@ -11,10 +11,15 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 import com.tyqhwl.jrqh.R;
 import com.tyqhwl.jrqh.base.BaseFragment;
+import com.tyqhwl.jrqh.base.EventBusTag;
 import com.tyqhwl.jrqh.homepage.adapter.MyAttentionAdapter;
 import com.tyqhwl.jrqh.homepage.presenter.MyAttentionPresenter;
 import com.tyqhwl.jrqh.homepage.view.MyAttentionEntry;
 import com.tyqhwl.jrqh.homepage.view.MyAttentionView;
+
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -53,6 +58,21 @@ public class MyAttentionFragment extends BaseFragment implements MyAttentionView
     @Override
     public void initView() {
 
+    }
+
+
+    @Override
+    public boolean isEventOrBindInit() {
+        return true;
+    }
+
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onEventThreadMain(Object o) {
+
+        if (o.equals(EventBusTag.LAVE_A_MESSAGE_SUCCESS)) {
+            myAttentionPresenter.getMyAttentionData();
+        }
     }
 
     @Override

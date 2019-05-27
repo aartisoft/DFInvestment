@@ -71,6 +71,10 @@
             android:configChanges="keyboardHidden|screenLayout"
             android:screenOrientation="portrait"
             />
+        <activity android:name=".homepage.activity.SeekActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
         <activity android:name=".homepage.activity.PostMessageActivity"
             android:configChanges="keyboardHidden|screenLayout"
             android:screenOrientation="portrait"

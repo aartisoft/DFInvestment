@@ -18,8 +18,8 @@ import com.tyqhwl.jrqh.R;
 import com.tyqhwl.jrqh.base.BaseFragment;
 import com.tyqhwl.jrqh.base.EventBusTag;
 import com.tyqhwl.jrqh.base.IntentSkip;
-import com.tyqhwl.jrqh.bookrack.activity.SigninsActivity;
 import com.tyqhwl.jrqh.homepage.activity.BookDetailActivity;
+import com.tyqhwl.jrqh.homepage.activity.SeekActivity;
 import com.tyqhwl.jrqh.homepage.adapter.BookItemAdapter;
 import com.tyqhwl.jrqh.homepage.view.BookEntry;
 import com.tyqhwl.jrqh.login.activity.LoginActivity;
@@ -54,6 +54,8 @@ public class BookRackFragment extends BaseFragment {
     RelativeLayout bookRackTital;
     Unbinder unbinder;
     ArrayList<BookEntry> data = new ArrayList<BookEntry>();
+    @BindView(R.id.book_rack_frag_seek)
+    ImageView bookRackFragSeek;
 
     private BookItemAdapter bookItemAdapter;
 
@@ -124,7 +126,7 @@ public class BookRackFragment extends BaseFragment {
         unbinder.unbind();
     }
 
-    @OnClick({  R.id.book_detail_image,R.id.book_rack_tital,
+    @OnClick({R.id.book_detail_image, R.id.book_rack_tital,
             R.id.book_detail_tital, R.id.continue_reading, R.id.book_rack_frag_recyclerview})
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -134,21 +136,27 @@ public class BookRackFragment extends BaseFragment {
                 break;
             case R.id.book_rack_tital:
                 //跳转到书籍详情页面
-                if (ApplicationStatic.getUserLoginState()){
+                if (ApplicationStatic.getUserLoginState()) {
                     IntentSkip.startIntent(getActivity(), new BookDetailActivity(), data.get(0));
-                }else {
+                } else {
                     IntentSkip.startIntent(getActivity(), new LoginActivity(), null);
                 }
 
                 break;
             case R.id.continue_reading:
                 //跳转到书籍详情页面
-                if (ApplicationStatic.getUserLoginState()){
+                if (ApplicationStatic.getUserLoginState()) {
                     IntentSkip.startIntent(getActivity(), new BookDetailActivity(), data.get(0));
-                }else {
+                } else {
                     IntentSkip.startIntent(getActivity(), new LoginActivity(), null);
                 }
                 break;
         }
+    }
+
+    @OnClick(R.id.book_rack_frag_seek)
+    public void onViewClicked() {
+        //跳转到搜索页面
+        IntentSkip.startIntent(getActivity(), new SeekActivity(), null);
     }
 }

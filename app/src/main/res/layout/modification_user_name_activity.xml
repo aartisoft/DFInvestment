@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_80"
-        android:background="@drawable/tital_bar_image"
+        android:background="@color/color_323e87"
         android:paddingTop="@dimen/dp_10">
 
 

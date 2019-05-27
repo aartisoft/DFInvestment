@@ -50,8 +50,7 @@ public class RegisterActivity extends BaseActivity implements LoginView {
     TextView loginActButton;
     @BindView(R.id.login_act_register_button)
     TextView loginActRegisterButton;
-    @BindView(R.id.login_act_background_image)
-    ImageView loginActBackgroundImage;
+
     private boolean verificationCodeType = true;
     int index = 60;
     private AwaitDialog awaitDialog;
@@ -74,9 +73,7 @@ public class RegisterActivity extends BaseActivity implements LoginView {
         super.onCreate(savedInstanceState);
         // TODO: add setContentView(...) invocation
         ButterKnife.bind(this);
-        Glide.with(this)
-                .load(R.drawable.user_background)
-                .into(loginActBackgroundImage);
+
     }
 
     @OnClick({R.id.back, R.id.register_act_verification_code, R.id.login_act_watch_checkbox, R.id.login_act_button, R.id.login_act_register_button})

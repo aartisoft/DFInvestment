@@ -170,9 +170,8 @@
                     android:layout_marginTop="-60dp"
                     android:layout_marginRight="@dimen/dp_33"
                     android:button="@null"
-                    android:visibility="invisible"
+                    android:visibility="gone"
                     />
-
 
             </RelativeLayout>
 

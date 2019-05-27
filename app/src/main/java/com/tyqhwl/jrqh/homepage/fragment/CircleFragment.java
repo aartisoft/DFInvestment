@@ -81,10 +81,9 @@ public class CircleFragment extends BaseFragment {
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventThreadMain(Object o) {
 
-        if (o.equals(EventBusTag.MY_ATTENTION)) {
+        if (o.equals(EventBusTag.MY_ATTENTION) || o.equals(EventBusTag.LAVE_A_MESSAGE_SUCCESS)) {
             circleFragViewpager.setCurrentItem(1);
             showIndex(1);
-
         }
     }
 

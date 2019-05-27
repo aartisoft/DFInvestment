@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_15"
+        android:paddingRight="@dimen/dp_15"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        >
+
+        <ImageView
+            android:id="@+id/seek_recycler_view_image"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="@dimen/dp_90" />
+
+        <TextView
+            android:id="@+id/seek_recycler_view_tital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_toRightOf="@id/seek_recycler_view_image"
+            android:text="数据显示"
+            android:textColor="@color/color_595959"
+            android:textSize="@dimen/sp_16" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_6"
+        android:background="@color/color_E0E0E0"
+        />
+
+</LinearLayout>

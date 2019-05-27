@@ -97,28 +97,22 @@ public class UserFragment extends BaseFragment {
     public void onEventThreadMain(Object o) {
         if (o.equals(EventBusTag.LOGIN_SUCCESS)) {
             init();
-
         }
         if (o.equals(EventBusTag.REGISTER_SUCCESS)) {
             init();
-
         }
         if (o.equals(EventBusTag.LOGIN_QUIT)) {
             init();
 
         }
-
         if (o.equals(EventBusTag.UPDATE_USER_LOGO)) {
             init();
 
         }
-
         if (o.equals(EventBusTag.UPDATE_USER_MESSAGE)) {
             init();
 
         }
-
-
     }
 
 

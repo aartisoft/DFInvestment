@@ -1,5 +1,6 @@
 package com.tyqhwl.jrqh.homepage.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -18,10 +19,15 @@ import com.tyqhwl.jrqh.R;
 import com.tyqhwl.jrqh.base.AwaitDialog;
 import com.tyqhwl.jrqh.base.BaseFragment;
 import com.tyqhwl.jrqh.base.BaseFragmentAdapter;
+import com.tyqhwl.jrqh.base.EventBusTag;
+import com.tyqhwl.jrqh.base.IntentSkip;
 import com.tyqhwl.jrqh.base.MyViewPager;
+import com.tyqhwl.jrqh.homepage.activity.SeekActivity;
 import com.tyqhwl.jrqh.homepage.presenter.BookItemPresenter;
 import com.tyqhwl.jrqh.homepage.view.BookEntry;
 import com.tyqhwl.jrqh.homepage.view.BookItemView;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.util.ArrayList;
 
@@ -56,12 +62,6 @@ public class BookMallFragment extends BaseFragment implements BookItemView {
     LinearLayout bookMallFragSeek;
     @BindView(R.id.study_fragment_tital)
     LinearLayout studyFragmentTital;
-    //    @BindView(R.id.book_mall_frag_catogory)
-//    LinearLayout bookMallFragCatogory;
-//    @BindView(R.id.book_mall_frag_top)
-//    LinearLayout bookMallFragTop;
-//    @BindView(R.id.book_mall_frag_look_top)
-//    LinearLayout bookMallFragLookTop;
     @BindView(R.id.book_mall_viewpager)
     MyViewPager bookMallViewpager;
     Unbinder unbinder;
@@ -115,7 +115,8 @@ public class BookMallFragment extends BaseFragment implements BookItemView {
     }
 
     @Override
-    public void initView() {}
+    public void initView() {
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -186,6 +187,7 @@ public class BookMallFragment extends BaseFragment implements BookItemView {
             @Override
             public void onPageScrolled(int i, float v, int i1) {
             }
+
             @Override
             public void onPageSelected(int i) {
                 showIndex(i);
@@ -246,7 +248,9 @@ public class BookMallFragment extends BaseFragment implements BookItemView {
         awaitDialog.dismiss();
     }
 
-    @OnClick({R.id.optional_textview_layout, R.id.international_layout, R.id.stock_index_textview_layout, R.id.inland_textview_layout})
+    @OnClick({R.id.optional_textview_layout, R.id.international_layout,
+            R.id.stock_index_textview_layout, R.id.inland_textview_layout, R.id.book_mall_seek
+            , R.id.book_mall_catagory})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.optional_textview_layout:
@@ -264,6 +268,13 @@ public class BookMallFragment extends BaseFragment implements BookItemView {
             case R.id.inland_textview_layout:
                 bookMallViewpager.setCurrentItem(3);
                 showIndex(3);
+                break;
+            case R.id.book_mall_seek:
+                //搜索
+                IntentSkip.startIntent(getActivity(), new SeekActivity(), null);
+                break;
+            case R.id.book_mall_catagory:
+                EventBus.getDefault().post(EventBusTag.INTENT_USER);
                 break;
         }
     }

@@ -57,11 +57,7 @@
         android:layout_marginTop="@dimen/dp_22"
         >
 
-        <ImageView
-            android:layout_width="@dimen/dp_16"
-            android:layout_height="@dimen/dp_21"
-            android:src="@drawable/image_phone"
-            tools:ignore="ContentDescription" />
+
 
         <EditText
             android:id="@+id/login_act_username_edittext"
@@ -96,11 +92,6 @@
 
         >
 
-        <ImageView
-            android:layout_width="@dimen/dp_16"
-            android:layout_height="@dimen/dp_21"
-            android:src="@drawable/image_code"
-            tools:ignore="ContentDescription" />
 
         <EditText
             android:id="@+id/register_act_verification_code_edittext"
@@ -146,12 +137,6 @@
         android:layout_marginRight="@dimen/dp_16"
         >
 
-        <ImageView
-            android:layout_width="@dimen/dp_16"
-            android:layout_height="@dimen/dp_21"
-            tools:ignore="ContentDescription"
-            android:src="@drawable/image_psd"
-            />
 
         <EditText
             android:id="@+id/login_act_password_edittext"

@@ -99,11 +99,6 @@ public class LookCatagoryActivity extends BaseActivity implements LookCatagoryVi
             case R.id.back:
                 finish();
                 break;
-//            case R.id.go_book_rack:
-//                //跳转到书架
-//                finish();
-//                EventBus.getDefault().post(EventBusTag.INTENT_BOOK_MALL);
-//                break;
         }
     }
 
@@ -131,6 +126,7 @@ public class LookCatagoryActivity extends BaseActivity implements LookCatagoryVi
             lookCatagoryActSwipe.setRefreshing(false);
             isSwipe = false;
         }
+        lookCatagoryEntry.setVisibility(View.VISIBLE);
     }
 
     @Override

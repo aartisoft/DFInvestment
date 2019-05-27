@@ -50,8 +50,6 @@ public class LoginActivity extends BaseActivity implements LoginView {
     TextView loginActRegisterButton;
     @BindView(R.id.login_act_forget_psd)
     TextView loginActForgetPsd;
-    @BindView(R.id.login_act_background_image)
-    ImageView loginActBackgroundImage;
 
     @Override
     public int getXMLLayout() {
@@ -76,12 +74,10 @@ public class LoginActivity extends BaseActivity implements LoginView {
         super.onCreate(savedInstanceState);
         // TODO: add setContentView(...) invocation
         ButterKnife.bind(this);
-        Glide.with(this)
-                .load(R.drawable.user_background)
-                .into(loginActBackgroundImage);
     }
 
-    @OnClick({R.id.back, R.id.login_act_watch_checkbox, R.id.login_act_button, R.id.login_act_register_button, R.id.login_act_forget_psd})
+    @OnClick({R.id.back, R.id.login_act_watch_checkbox, R.id.login_act_button,
+            R.id.login_act_register_button, R.id.login_act_forget_psd})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.back:

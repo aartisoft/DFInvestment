@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    >
+
+    <RelativeLayout
+        android:id="@+id/book_mall_tital"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:background="@color/color_3023AE"
+        tools:ignore="UselessParent">
+
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:src="@drawable/back_white"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_15"
+            />
+
+        <LinearLayout
+            android:id="@+id/book_mall_seek_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_toRightOf="@id/back"
+            >
+
+            <LinearLayout
+                android:id="@+id/book_mall_seek"
+                android:layout_width="@dimen/dp_0"
+                android:layout_weight="1"
+                android:layout_height="@dimen/dp_35"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_15"
+                android:background="@drawable/seek_background"
+                tools:ignore="InefficientWeight">
+
+
+                <EditText
+                    android:id="@+id/seek_act_edittext"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textSize="@dimen/dp_15"
+                    android:textColorHint="@color/colorWhite"
+                    android:textColor="@color/colorWhite"
+                    android:hint="请输入书籍名称"
+                    />
+
+
+                <TextView
+                    android:id="@+id/seek_act_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/color_E44012"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10"
+                    android:text="搜索"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <RelativeLayout
+            android:id="@+id/entry_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+
+
+            <ImageView
+                android:id="@+id/seek_act_entry_image"
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="@dimen/dp_90"
+                android:src="@drawable/entry_image"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dp_15"
+                android:textColor="@color/color_595959"
+                android:text="没有找到书籍"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/seek_act_entry_image"
+                android:layout_marginTop="@dimen/dp_10"
+                />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>
