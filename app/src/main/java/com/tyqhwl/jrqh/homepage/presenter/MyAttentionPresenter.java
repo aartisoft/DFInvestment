@@ -1,19 +1,15 @@
 package com.tyqhwl.jrqh.homepage.presenter;
 
 import android.util.Log;
-
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.FindCallback;
-import com.tyqhwl.jrqh.ApplicationStatic;
 import com.tyqhwl.jrqh.homepage.view.AttentionListEntry;
 import com.tyqhwl.jrqh.homepage.view.MyAttentionEntry;
 import com.tyqhwl.jrqh.homepage.view.MyAttentionView;
-
 import org.json.JSONArray;
 import org.json.JSONException;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

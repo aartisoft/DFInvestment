@@ -1,6 +1,7 @@
 package com.tyqhwl.jrqh.base;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -33,9 +34,8 @@ public class BaseTime implements Serializable {
     }
 
 
-
     //获取当天23:59点毫秒值
-    public static long getTodayEnd(){
+    public static long getTodayEnd() {
         Calendar calendar2 = Calendar.getInstance();
 
         calendar2.set(calendar2.get(Calendar.YEAR), calendar2.get(Calendar.MONTH), calendar2.get(Calendar.DAY_OF_MONTH),
@@ -120,5 +120,10 @@ public class BaseTime implements Serializable {
 
     }
 
-
+    public static String getCurrentTime() {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");// HH:mm:ss
+        Date date = new Date(System.currentTimeMillis());
+//        time1.setText("Date获取当前日期时间"+simpleDateFormat.format(date));
+        return simpleDateFormat.format(date);
+    }
 }

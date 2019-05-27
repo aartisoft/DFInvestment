@@ -3,108 +3,125 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:orientation="vertical"
     >
-
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/background"
+
+        <RelativeLayout
+            android:id="@+id/signins_act_tital"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            />
-
-        <ImageView
-            android:id="@+id/sigins_activity_back"
-            android:layout_width="15dp"
-            android:layout_height="@dimen/dp_22"
-            android:layout_marginTop="@dimen/dp_46"
-            android:layout_marginLeft="@dimen/dp_20"
-            android:background="@drawable/back_18aa"
-            />
-
-
-
-
-
-        <ImageView
-            android:id="@+id/signin_detail_image"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_269"
-            android:layout_below="@id/sigins_activity_back"
-            android:layout_marginTop="@dimen/dp_30"
-            android:layout_marginLeft="@dimen/dp_25"
-            android:layout_marginRight="@dimen/dp_25"
-            android:src="@drawable/image_firsts"
-            />
-
-
-
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="236dp"
-            android:layout_below="@id/signin_detail_image"
-            android:layout_marginLeft="@dimen/dp_15"
-            android:layout_marginRight="@dimen/dp_15"
-            android:orientation="vertical"
-            android:gravity="center_vertical"
-            android:background="@drawable/signins_act_shape"
-            android:layout_marginTop="-30dp"
-            android:paddingTop="@dimen/dp_30"
-            android:paddingLeft="@dimen/dp_40"
+            android:layout_height="@dimen/dp_70"
+            android:background="@color/color_323e87"
             >
 
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_15"
-                android:textColor="@color/color_17B2AA"
-                android:text="1.每日签到可领取100积分"
+            <ImageView
+                android:id="@+id/sigins_activity_back"
+                android:layout_width="15dp"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:background="@drawable/back_white"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_15"
                 />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_15"
-                android:textColor="@color/color_17B2AA"
-                android:text="2.积分可用于文章阅读"
-                android:layout_marginTop="@dimen/dp_15"
+                android:textSize="@dimen/sp_17"
+                android:text="积分规则"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_15"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorWhite"
                 />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_15"
-                android:textColor="@color/color_17B2AA"
-                android:text="3.一篇文章10积分"
-                android:layout_marginTop="@dimen/dp_15"
-                />
 
-        </LinearLayout>
-
-
-        <TextView
-            android:id="@+id/signin"
-            android:layout_width="@dimen/dp_172"
-            android:layout_height="@dimen/dp_45"
-            android:layout_alignBottom="@+id/signin_detail_image"
-            android:layout_centerHorizontal="true"
-            android:gravity="center"
-            android:background="@drawable/signind_act_shape"
-            android:text="每日签到即可领积分"
-            android:textSize="@dimen/sp_15"
-            android:textColor="@color/colorWhite"
-            />
-
+        </RelativeLayout>
 
     </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_75"
+        android:paddingLeft="@dimen/sp_17"
+        android:paddingRight="@dimen/sp_17"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/color_090909"
+            android:text="本平台积分可用于书城书籍阅读使用，一章10积分，积分不足不可以阅读。"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_6"
+        android:background="@color/color_F5F5F5"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:textSize="@dimen/sp_15"
+        android:textColor="@color/color_3B424C"
+        android:paddingLeft="@dimen/dp_15"
+        android:gravity="center_vertical"
+        android:text="积分获取途径"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_54"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:src="@drawable/fatie"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/color_090909"
+            android:layout_marginLeft="@dimen/sp_12"
+            android:text="发帖"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_54"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:src="@drawable/collect_image"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/color_090909"
+            android:layout_marginLeft="@dimen/sp_12"
+            android:text="圈子关注"
+            />
+    </LinearLayout>
 </LinearLayout>

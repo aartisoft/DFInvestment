@@ -63,7 +63,15 @@
             android:configChanges="keyboardHidden|screenLayout"
             android:screenOrientation="portrait"
             />
+        <activity android:name=".user.activity.MyBookRackActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
         <activity android:name="com.tyqhwl.jrqh.exercise.actviity.ExerciseActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".homepage.activity.PostMessageActivity"
             android:configChanges="keyboardHidden|screenLayout"
             android:screenOrientation="portrait"
             />
@@ -72,6 +80,10 @@
             android:screenOrientation="portrait"
             />
         <activity android:name="com.tyqhwl.jrqh.goover.activity.UserCollectActivity"
+        android:configChanges="keyboardHidden|screenLayout"
+        android:screenOrientation="portrait"
+        />
+        <activity android:name=".information.activity.InversorCommentActivity"
             android:configChanges="keyboardHidden|screenLayout"
             android:screenOrientation="portrait"
             />

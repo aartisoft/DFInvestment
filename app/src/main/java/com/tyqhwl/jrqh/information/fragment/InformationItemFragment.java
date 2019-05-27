@@ -23,6 +23,10 @@ import com.tyqhwl.jrqh.seek.presenter.InversorPresenter;
 import com.tyqhwl.jrqh.seek.view.InversorDetailSer;
 import com.tyqhwl.jrqh.seek.view.InversorEntry;
 import com.tyqhwl.jrqh.seek.view.InversorView;
+
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -89,14 +93,30 @@ public class InformationItemFragment extends BaseFragment implements InversorVie
     }
 
 
+    @Override
+    public boolean isEventOrBindInit() {
+        return true;
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onEventThreadMain(Object o){
+        if (o instanceof InversorEntry){
+            arrayList.add(0 , (InversorEntry) o);
+            inversorAdapter.notifyDataSetChanged();
+            recycleViewLoadWrapper.notifyDataSetChanged();
+        }
+    }
+
     private void init() {
         linearLayoutManager = new BaseLinearLayout(getActivity());
         informationItemRecyclerviewSecond.setLayoutManager(linearLayoutManager);
         inversorAdapter = new InversorAdapter(getActivity(), arrayList, new InversorAdapter.InversorClickListener() {
             @Override
             public void onClickListerer(int index) {
-                //item点击事件
-                IntentSkip.startIntent(getActivity(), new InversorDetailActivity(), new InversorDetailSer(arrayList.get(index).post_id));
+                if (!arrayList.get(index).isCheck){
+                    //item点击事件
+                    IntentSkip.startIntent(getActivity(), new InversorDetailActivity(), new InversorDetailSer(arrayList.get(index).post_id));
+                }
             }
         }, getActivity());
         recycleViewLoadWrapper = new RecycleViewLoadWrapper(inversorAdapter, new RecycleViewLoadWrapper.EntryClickListener() {

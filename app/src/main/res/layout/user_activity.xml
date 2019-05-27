@@ -2,16 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/colorWhite"
+    android:background="@color/color_F5F5F5"
     android:orientation="vertical"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
 
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_70"
-        android:background="@color/colorWhite"
+        android:background="@color/color_323e87"
         android:paddingTop="@dimen/dp_10">
 
 
@@ -28,7 +29,7 @@
                 android:id="@+id/homepage_frag_sign_in"
                 android:layout_width="@dimen/dp_15"
                 android:layout_height="@dimen/dp_28"
-                android:src="@drawable/back_787878"
+                android:src="@drawable/back_white"
                 tools:ignore="ContentDescription" />
         </LinearLayout>
 
@@ -39,7 +40,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/dp_22"
             android:text="用户"
-            android:textColor="@color/color_595959"
+            android:textColor="@color/colorWhite"
             android:textSize="17sp"
             tools:ignore="HardcodedText" />
     </RelativeLayout>
@@ -54,9 +55,10 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_60"
         android:layout_marginTop="@dimen/dp_22"
-        android:layout_marginLeft="@dimen/dp_15"
-        android:layout_marginRight="@dimen/dp_15"
+        android:paddingLeft="@dimen/dp_15"
+        android:paddingRight="@dimen/dp_15"
         android:gravity="center_vertical"
+        android:background="@color/colorWhite"
         >
 
         <TextView
@@ -74,7 +76,7 @@
             android:id="@+id/user_act_login_myuser_image"
             android:layout_width="@dimen/dp_32"
             android:layout_height="@dimen/dp_32"
-            android:src="@drawable/image_user"
+            android:src="@drawable/user_image"
             />
         
     </LinearLayout>
@@ -85,9 +87,10 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_60"
         android:layout_marginTop="@dimen/dp_8"
-        android:layout_marginLeft="@dimen/dp_15"
-        android:layout_marginRight="@dimen/dp_15"
+        android:paddingRight="@dimen/dp_15"
+        android:paddingLeft="@dimen/dp_15"
         android:gravity="center_vertical"
+        android:background="@color/colorWhite"
         >
 
         <TextView
@@ -119,12 +122,13 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_54"
         android:layout_marginTop="@dimen/dp_60"
-        android:gravity="center"
         android:textSize="@dimen/sp_15"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/color_E44012"
         android:layout_marginLeft="@dimen/dp_15"
         android:layout_marginRight="@dimen/dp_15"
         android:text="退出登录"
-        android:background="@drawable/user_act_unlogin_shape"
+        android:background="@color/colorWhite"
+        android:paddingLeft="@dimen/sp_15"
+        android:gravity="center"
         />
 </LinearLayout>

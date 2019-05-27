@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70"
+        android:background="@color/color_323e87"
+        android:paddingTop="@dimen/dp_10">
+
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginTop="@dimen/sp_10"
+            android:padding="@dimen/sp_10"
+            tools:ignore="RtlHardcoded">
+
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_25"
+                android:src="@drawable/back_white"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_22"
+            android:text="添加评论"
+            android:textColor="@color/colorWhite"
+            android:textSize="17sp"
+            tools:ignore="HardcodedText" />
+
+
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/iversror_comment_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_150"
+        android:layout_margin="@dimen/sp_15"
+        android:background="@drawable/inversor_comment_edittext_shape"
+        android:padding="@dimen/dp_10"
+        android:hint="请输入你的评论"
+        android:textSize="@dimen/sp_15"
+        android:gravity="top"
+        />
+
+
+    <TextView
+        android:id="@+id/iversror_comment_commit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/sp_15"
+        android:layout_marginRight="@dimen/sp_15"
+        android:textSize="@dimen/dp_16"
+        android:textColor="@color/colorWhite"
+        android:text="提交"
+        android:gravity="center"
+        android:background="@drawable/inversor_commit_shape"
+        />
+</LinearLayout>

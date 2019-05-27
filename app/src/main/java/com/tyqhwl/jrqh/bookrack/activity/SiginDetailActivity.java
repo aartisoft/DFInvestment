@@ -20,8 +20,6 @@ import butterknife.OnClick;
 public class SiginDetailActivity extends BaseActivity {
     @BindView(R.id.sigins_activity_back)
     ImageView siginsActivityBack;
-    @BindView(R.id.signin_detail_image)
-    ImageView signinDetailImage;
     @BindView(R.id.background)
     ImageView background;
 

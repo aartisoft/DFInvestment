@@ -42,24 +42,14 @@ import butterknife.OnClick;
 public class SigninsActivity extends BaseActivity implements SignInView {
     @BindView(R.id.sigins_activity_back)
     ImageView siginsActivityBack;
-    @BindView(R.id.sigins_activity_detial)
-    ImageView siginsActivityDetial;
-    @BindView(R.id.signin_image)
-    ImageView signinImage;
-    @BindView(R.id.signins_act_thread)
-    TextView signinsActThread;
-    @BindView(R.id.signins_act_thread_image)
-    ImageView signinsActThreadImage;
-    @BindView(R.id.signins_act_record)
-    TextView signinsActRecord;
-    @BindView(R.id.signin)
-    TextView signin;
-    @BindView(R.id.background)
-    ImageView background;
-    @BindView(R.id.signins_act_month)
-    TextView month;
+    @BindView(R.id.sigins_activity_detail)
+    TextView saDel;
     @BindView(R.id.signins_act_integral)
     TextView signActintegral;
+    @BindView(R.id.signins_act_count)
+    TextView saCount;
+    @BindView(R.id.signin)
+    TextView signin;
     private int showStart = 0;//  0:已签到  1：未签到
     private Date calendarViewDate;
     private SignInPresenter signInPresenter = new SignInPresenter(this);
@@ -82,18 +72,15 @@ public class SigninsActivity extends BaseActivity implements SignInView {
         super.onCreate(savedInstanceState);
         // TODO: add setContentView(...) invocation
         ButterKnife.bind(this);
-        Glide.with(this)
-                .load(R.drawable.sign_in_background)
-                .into(background);
+
         signInPresenter.getSignInData();
 
         //获取今日日期
-        Calendar calendar = Calendar.getInstance();
-        int year = calendar.get(Calendar.YEAR);
-        int months = calendar.get(Calendar.MONTH) + 1;
-        int mDay = calendar.get(Calendar.DAY_OF_MONTH);// 获取当日期
-        month.setText(year + "年" + months + "月");
-        signinsActThread.setText(mDay + "");
+//        Calendar calendar = Calendar.getInstance();
+//        int year = calendar.get(Calendar.YEAR);
+//        int months = calendar.get(Calendar.MONTH) + 1;
+//        int mDay = calendar.get(Calendar.DAY_OF_MONTH);// 获取当日期
+
     }
 
 
@@ -111,29 +98,15 @@ public class SigninsActivity extends BaseActivity implements SignInView {
     }
 
 
-    @OnClick({R.id.sigins_activity_back, R.id.sigins_activity_detial,
-            R.id.signin_image, R.id.signins_act_thread,
-            R.id.signins_act_thread_image, R.id.signins_act_record, R.id.signin})
+    @OnClick({R.id.sigins_activity_back, R.id.sigins_activity_detail,R.id.signin})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.sigins_activity_back:
                 finish();
                 break;
-            case R.id.sigins_activity_detial:
+            case R.id.sigins_activity_detail:
                 //跳转到积分规则页面
                 IntentSkip.startIntent(this , new SiginDetailActivity() , null);
-                break;
-            case R.id.signin_image:
-                break;
-            case R.id.signins_act_thread:
-                break;
-            case R.id.signins_act_thread_image:
-                break;
-            case R.id.signins_act_record:
-                //签到记录
-                SignInsDialog signInsDialog = new SignInsDialog(this, R.style.DialogTrangparent, signinCount);
-                signInsDialog.setCancelable(true);
-                signInsDialog.show();
                 break;
             case R.id.signin:
                 switch (showStart) {
@@ -171,6 +144,7 @@ public class SigninsActivity extends BaseActivity implements SignInView {
             ApplicationStatic.setSignInNumberOfDays(arrayList.get(0).signinList.size());
             showStart = 1;
             signinCount = arrayList.get(0).signinList.size();//总签到天数
+            saCount.setText(signinCount + "");
             for (int i = 0; i < arrayList.get(0).signinList.size(); i++) {
                 data.add(arrayList.get(0).signinList.get(i));
 //                Log.e("show",arrayList.get(0).signinList.get(i))
@@ -181,16 +155,16 @@ public class SigninsActivity extends BaseActivity implements SignInView {
                     isSignin = true;
                 }
             }
-            if (isSignin){
-                signinsActThreadImage.setVisibility(View.VISIBLE);
-                showStart = 1;
-
-            }else {
-                signinsActThreadImage.setVisibility(View.INVISIBLE);
-                showStart = 0;
-//                signActintegral.setText("0.00");
-            }
-            signActintegral.setText(signinCount *100 + ".00");
+//            if (isSignin){
+//                signinsActThreadImage.setVisibility(View.VISIBLE);
+//                showStart = 1;
+//
+//            }else {
+//                signinsActThreadImage.setVisibility(View.INVISIBLE);
+//                showStart = 0;
+////                signActintegral.setText("0.00");
+//            }
+            signActintegral.setText(signinCount *100 + "");
         }
     }
 
@@ -214,16 +188,18 @@ public class SigninsActivity extends BaseActivity implements SignInView {
 
     @Override
     public void signInSuccess() {
-        signActintegral.setText((signinCount+1) *100 + ".00");
+        signActintegral.setText((signinCount+1) *100 + "");
         Toast.makeText(this, "签到成功", Toast.LENGTH_SHORT).show();
         signin.setText("已签到");
-        signinsActThreadImage.setVisibility(View.VISIBLE);
+        signinCount++;
+        saCount.setText(signinCount + "");
+//        signinsActThreadImage.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void signInFail(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-        signinsActThreadImage.setVisibility(View.INVISIBLE);
+//        signinsActThreadImage.setVisibility(View.INVISIBLE);
     }
 
     @Override

@@ -14,60 +14,44 @@
         android:layout_height="match_parent">
 
 
-        <ImageView
-            android:id="@+id/inversor_detail_act_image"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            />
-
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/inversor_detail_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/dp_28"
-            android:layout_marginLeft="@dimen/dp_15"
-            android:layout_marginRight="@dimen/dp_15"
-            android:gravity="center_vertical"
-            >
+            android:layout_height="@dimen/dp_70"
+            android:background="@color/color_323e87"
+            android:paddingTop="@dimen/dp_10">
 
-            <ImageView
-                android:id="@+id/authentication_back_image"
-                android:layout_width="@dimen/dp_23"
-                android:layout_height="@dimen/dp_23"
-                android:src="@drawable/back_white"
-                tools:ignore="ContentDescription" />
 
+            <LinearLayout
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginTop="@dimen/sp_10"
+                android:padding="@dimen/sp_10"
+                tools:ignore="RtlHardcoded">
+
+                <ImageView
+                    android:id="@+id/homepage_frag_sign_in"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:src="@drawable/back_white"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
 
 
             <TextView
-                android:id="@+id/new_details_act_tital"
-                android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_20"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_22"
+                android:text="帖子详情"
                 android:textColor="@color/colorWhite"
-                android:text="行情动态"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:maxLines="1"
-                android:layout_marginLeft="@dimen/dp_15"
-                android:layout_marginRight="@dimen/dp_15"
+                android:textSize="17sp"
                 tools:ignore="HardcodedText" />
 
+        </RelativeLayout>
 
-            <ImageView
-                android:layout_width="@dimen/dp_16"
-                android:layout_height="@dimen/dp_23"
-                android:src="@drawable/back_white"
-                android:visibility="invisible"
-                tools:ignore="ContentDescription" />
-
-
-
-
-        </LinearLayout>
 
         <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -87,7 +71,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="13sp"
-                    android:textColor="@color/colorWhite"
+                    android:textColor="@color/color_1A1A1A"
                     android:layout_marginTop="@dimen/dp_10"
                     android:layout_marginLeft="@dimen/dp_16"
                     android:layout_marginRight="@dimen/dp_16"

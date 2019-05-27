@@ -36,8 +36,8 @@ public class MyAttentionItemAdapte extends RecyclerView.Adapter<MyAttentionItemA
     public void onBindViewHolder(@NonNull MyAttentionItemHolder myAttentionItemHolder, int i) {
 
         if (myAttentionItemHolder != null){
-            myAttentionItemHolder.userName.setText(data.get(i).userName + " : ");
-            myAttentionItemHolder.comment.setText(data.get(i).userComment + "");
+            myAttentionItemHolder.userName.setText(data.get(i).userNames + " : ");
+            myAttentionItemHolder.comment.setText(data.get(i).comments + "");
 
             if (i == 0){
                 myAttentionItemHolder.view.setVisibility(View.VISIBLE);

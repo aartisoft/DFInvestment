@@ -20,6 +20,8 @@ import com.tyqhwl.jrqh.ApplicationStatic;
 import com.tyqhwl.jrqh.R;
 import com.tyqhwl.jrqh.base.AwaitDialog;
 import com.tyqhwl.jrqh.base.IntentSkip;
+import com.tyqhwl.jrqh.homepage.activity.CommentActivity;
+import com.tyqhwl.jrqh.information.activity.InversorCommentActivity;
 import com.tyqhwl.jrqh.information.presenter.AddInversorMyCollectPresenter;
 import com.tyqhwl.jrqh.information.view.AddInversorMyCollectView;
 import com.tyqhwl.jrqh.information.view.AddInversorMyEntry;
@@ -189,6 +191,26 @@ public class InversorAdapter extends RecyclerView.Adapter<InversorAdapter.Invers
                         addInversorMyCollectPresenter.getAddInversorMyCollect(new AddInversorMyEntry(arrayList.get(i).thumb , arrayList.get(i).read , arrayList.get(i).time,
                                 arrayList.get(i).title , arrayList.get(i).summary , arrayList.get(i).post_id , ApplicationStatic.getUserMessage().getObjectId() ,
                                 finalUserImage,arrayList.get(i).image , finalUserName));
+                    }else {
+                        //登录
+                        IntentSkip.startIntent(activity , new LoginActivity() , null);
+                    }
+                }
+            });
+
+            inversorHolder.commentImage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (ApplicationStatic.getUserLoginState()){
+                        //添加评论
+//                        addInversorMyCollectPresenter.getAddInversorMyCollect(new AddInversorMyEntry(arrayList.get(i).thumb , arrayList.get(i).read , arrayList.get(i).time,
+//                                arrayList.get(i).title , arrayList.get(i).summary , arrayList.get(i).post_id , ApplicationStatic.getUserMessage().getObjectId() ,
+//                                finalUserImage,arrayList.get(i).image , finalUserName));
+
+                        IntentSkip.startIntent(activity , new InversorCommentActivity() , new AddInversorMyEntry(arrayList.get(i).thumb , arrayList.get(i).read , arrayList.get(i).time,
+                                arrayList.get(i).title , arrayList.get(i).summary , arrayList.get(i).post_id , ApplicationStatic.getUserMessage().getObjectId() ,
+                                finalUserImage,arrayList.get(i).image , finalUserName));
+
                     }else {
                         //登录
                         IntentSkip.startIntent(activity , new LoginActivity() , null);

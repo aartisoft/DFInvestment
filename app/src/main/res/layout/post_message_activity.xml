@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    >
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70"
+        android:background="@color/color_323e87"
+        android:paddingTop="@dimen/dp_10">
+
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginTop="@dimen/sp_10"
+            android:padding="@dimen/sp_10"
+            tools:ignore="RtlHardcoded">
+
+            <ImageView
+                android:id="@+id/homepage_frag_sign_in"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:src="@drawable/back_white"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_22"
+            android:text="发帖"
+            android:textColor="@color/colorWhite"
+            android:textSize="17sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/my_quiz_frag_quiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:text="发表"
+            android:textSize="@dimen/sp_16"
+            android:layout_gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/sp_15"
+            android:layout_marginRight="@dimen/sp_15"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_130"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        tools:ignore="RtlHardcoded">
+        <EditText
+            android:id="@+id/user_feed_back_act_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_130"
+            android:gravity="left"
+            android:textColor="@color/color_333333"
+            android:textColorHint="@color/color_E0E0E0"
+            android:hint="发表你的想法"
+            android:background="@null"
+            android:textSize="15sp"
+            android:maxLength="200"
+            tools:ignore="Autofill,HardcodedText,SpUsage,TextFields" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            >
+
+            <TextView
+                android:id="@+id/user_feed_back_act_index"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="14sp"
+                android:textColor="@color/color_999999"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/200"
+                android:textSize="14sp"
+                android:textColor="@color/color_999999"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/user_feed_back_act_image"
+        android:layout_width="@dimen/dp_90"
+        android:layout_height="@dimen/dp_90"
+        android:src="@drawable/add_image"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginLeft="@dimen/dp_16"
+        />
+
+
+
+
+
+
+
+</LinearLayout>

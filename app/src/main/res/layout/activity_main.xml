@@ -34,7 +34,9 @@
             android:orientation="horizontal"
             android:gravity="center"
             android:background="@color/colorWhite"
-            tools:ignore="DisableBaselineAlignment">
+            tools:ignore="DisableBaselineAlignment"
+            android:elevation="@dimen/dp_4"
+            >
 
             <LinearLayout
                 android:id="@+id/acct_main_homepage_layout"
@@ -60,7 +62,7 @@
                     android:id="@+id/acct_main_homepage_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/color_17B2AA"
+                    android:textColor="@color/color_2B3779"
                     android:text="书城"
                     android:textSize="@dimen/sp_13"
                     android:layout_marginTop="@dimen/dp_2"
@@ -91,7 +93,7 @@
                     android:id="@+id/acct_main_market_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/color_4A4A4A"
+                    android:textColor="@color/color_7D8596"
                     android:text="书架"
                     android:textSize="@dimen/sp_13"
                     android:layout_marginTop="@dimen/dp_2"
@@ -120,7 +122,7 @@
                     android:id="@+id/acct_main_circle_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/color_4A4A4A"
+                    android:textColor="@color/color_7D8596"
                     android:text="圈子"
                     android:textSize="@dimen/sp_13"
                     android:layout_marginTop="@dimen/dp_2"
@@ -147,7 +149,7 @@
                     android:id="@+id/acct_main_user_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/color_4A4A4A"
+                    android:textColor="@color/color_7D8596"
                     android:text="我的"
                     android:textSize="@dimen/sp_13"
                     android:layout_marginTop="@dimen/dp_2"

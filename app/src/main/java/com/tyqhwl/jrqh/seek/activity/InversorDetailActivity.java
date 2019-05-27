@@ -10,6 +10,7 @@ import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -38,14 +39,8 @@ public class InversorDetailActivity extends BaseActivity implements InversorDeta
 
     @BindView(R.id.inversor_detail_act_count)
     TextView inversorDetailActCount;
-    @BindView(R.id.authentication_back_image)
-    ImageView authenticationBackImage;
-//    @BindView(R.id.authentication_back_text)
-//    TextView authenticationBackText;
-    @BindView(R.id.new_details_act_tital)
-    TextView newDetailsActTital;
-    @BindView(R.id.inversor_detail_act_image)
-    ImageView inversorDetailActImage;
+    @BindView(R.id.back)
+    LinearLayout back;
     private int postId;
 
     private InversorDetailPresenter inversorDetailPresenter = new InversorDetailPresenter(this);
@@ -64,16 +59,12 @@ public class InversorDetailActivity extends BaseActivity implements InversorDeta
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ButterKnife.bind(this);
-        Glide.with(this)
-                .load(R.drawable.background_image)
-                .into(inversorDetailActImage);
         init();
     }
 
     private void init() {
         InversorDetailSer inversorDetailSer = (InversorDetailSer) getIntent().getSerializableExtra(IntentSkip.INTENT_BUILD);
         postId = inversorDetailSer.getPostId();
-        Log.e("show" , postId + "");
         inversorDetailPresenter.getInversor(postId);
     }
 
@@ -81,12 +72,11 @@ public class InversorDetailActivity extends BaseActivity implements InversorDeta
     @SuppressLint("SetTextI18n")
     @Override
     public void getInversorDetailSuccess(InversorDetailEntry inversorDetailEntry) {
-        newDetailsActTital.setText(inversorDetailEntry.getTitle() + "");
+//        newDetailsActTital.setText(inversorDetailEntry.getTitle() + "");
         HtmlText.from(inversorDetailEntry.getContent())
                 .setImageLoader(new HtmlImageLoader() {
                     @Override
                     public void loadImage(String s, final Callback callback) {
-                        // Glide sample, you can also use other image loader
                         Glide.with(getApplicationContext())
                                 .load(s)
                                 .into(new SimpleTarget<Drawable>() {
@@ -141,10 +131,10 @@ public class InversorDetailActivity extends BaseActivity implements InversorDeta
 
     }
 
-    @OnClick({R.id.authentication_back_image})
+    @OnClick({R.id.back})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.authentication_back_image:
+            case R.id.back:
                 finish();
                 break;
         }

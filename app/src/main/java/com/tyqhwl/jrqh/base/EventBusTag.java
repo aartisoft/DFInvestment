@@ -31,5 +31,6 @@ public class EventBusTag {
     public static final String INTENT_BOOK_MALL = "intent_book_mall";//跳转到书城
     public static final String INTENT_BOOK_MALL_SECOND = "intent_book_mall_second";//跳转到书城2
     public static final String READING_MODEL = "reading_model";//阅读模式
+    public static final String MY_ATTENTION = "my_attention";//我的关注
 
 }

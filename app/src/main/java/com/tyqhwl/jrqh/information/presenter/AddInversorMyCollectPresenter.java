@@ -24,6 +24,7 @@ public class AddInversorMyCollectPresenter{
         this.addInversorMyCollectView = addInversorMyCollectView;
     }
 
+    //收藏
     public void getAddInversorMyCollect(AddInversorMyEntry addInversorMyEntry){
         addInversorMyCollectView.showAwait();
         AVQuery<AVObject> avObjectAVQuery = new AVQuery<>("MyAttention");
@@ -81,6 +82,7 @@ public class AddInversorMyCollectPresenter{
     }
 
 
+    //提交到服务器
     private void getAddData(AddInversorMyEntry addInversorMyEntry){
         AVObject avObject = new AVObject("MyAttention");
         avObject.put("thumb" , addInversorMyEntry.thumb);

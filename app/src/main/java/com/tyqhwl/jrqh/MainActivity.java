@@ -69,7 +69,6 @@ public class MainActivity extends BaseActivity implements LoginView {
     private BookMallFragment homePageFragment;
     private BookRackFragment seekFragment;
     private CircleFragment circleFragment;
-//    private GoOverFragment goOverFragment;
     private UserFragment userFragmetn;
     private FragmentManager fragmentManager;
     @Override
@@ -161,11 +160,14 @@ public class MainActivity extends BaseActivity implements LoginView {
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventThreadMain(Object o) {
-//        Toast.makeText(this , "wei执行" , Toast.LENGTH_SHORT).show();
         if (o.equals(EventBusTag.INTENT_BOOK_MALL)) {
-//            Toast.makeText(this , "执行" , Toast.LENGTH_SHORT).show();
             showFragment(TAG0);
             showIndex(0);
+        }
+        if (o.equals(EventBusTag.MY_ATTENTION)) {
+            showFragment(TAG2);
+            showIndex(2);
+
         }
     }
 
@@ -217,27 +219,27 @@ public class MainActivity extends BaseActivity implements LoginView {
         acctMainMarketCheckbox.setChecked(false);
         acctMainUserCheckbox.setChecked(false);
         acctMainCircleCheckbox.setChecked(false);
-        acctMainHomepageText.setTextColor(Color.parseColor("#4A4A4A"));
-        acctMainMarketText.setTextColor(Color.parseColor("#4A4A4A"));
-        acctMainUserText.setTextColor(Color.parseColor("#4A4A4A"));
-        acctMainCircleText.setTextColor(Color.parseColor("#4A4A4A"));
+        acctMainHomepageText.setTextColor(Color.parseColor("#7d8596"));
+        acctMainMarketText.setTextColor(Color.parseColor("#7d8596"));
+        acctMainUserText.setTextColor(Color.parseColor("#7d8596"));
+        acctMainCircleText.setTextColor(Color.parseColor("#7d8596"));
 
         switch (index) {
             case 0:
                 acctMainHomepageCheckbox.setChecked(true);
-                acctMainHomepageText.setTextColor(Color.parseColor("#17B2AA"));
+                acctMainHomepageText.setTextColor(Color.parseColor("#2B3779"));
                 break;
             case 1:
                 acctMainMarketCheckbox.setChecked(true);
-                acctMainMarketText.setTextColor(Color.parseColor("#17B2AA"));
+                acctMainMarketText.setTextColor(Color.parseColor("#2B3779"));
                 break;
             case 2:
                 acctMainCircleCheckbox.setChecked(true);
-                acctMainCircleText.setTextColor(Color.parseColor("#17B2AA"));
+                acctMainCircleText.setTextColor(Color.parseColor("#2B3779"));
                 break;
             case 3:
                 acctMainUserCheckbox.setChecked(true);
-                acctMainUserText.setTextColor(Color.parseColor("#17B2AA"));
+                acctMainUserText.setTextColor(Color.parseColor("#2B3779"));
                 break;
         }
     }
