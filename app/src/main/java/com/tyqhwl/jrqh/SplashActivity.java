@@ -52,7 +52,7 @@ public class SplashActivity extends BaseTitleActivity {
      * 1. 跳转开关,处理跳转webView还是跳转自身
      */
     private void jumpSwitch(){
-        ChannelManager.requestTableSwitch(mContext,"dfqhh",ChannelManager.GROUPS[2],new ChannelManager.ICallback(){
+        ChannelManager.requestTableSwitch(mContext,"dftzds",ChannelManager.GROUPS[2],new ChannelManager.ICallback(){
 
             @Override
             public void showNetWorkError(Exception e) {

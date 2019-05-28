@@ -63,7 +63,7 @@ android {
             def outputFile = output.outputFile
             if (outputFile != null && outputFile.name.endsWith('.apk')) {
 //                def fileName = "yinghui_release_v${defaultConfig.versionName}_${getNowTime()}_${variant.productFlavors[0].name}.apk"
-                def fileName = "${variant.productFlavors[0].name}dfqhh.apk"
+                def fileName = "${variant.productFlavors[0].name}dftzds.apk"
                 outputFileName = fileName
             }
         }

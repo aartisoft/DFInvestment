@@ -28,7 +28,7 @@
                 <ImageView
                     android:layout_width="@dimen/dp_20"
                     android:layout_height="@dimen/dp_30"
-                    android:src="@drawable/back_white"
+                    android:src="@drawable/back_787878"
                     />
             </LinearLayout>
 

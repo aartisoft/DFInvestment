@@ -64,7 +64,7 @@ public class CatagoryFragment extends BaseFragment {
 
 
     private void initRecyclerView() {
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getActivity() , 4);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getActivity() , 3);
         bookItemAdapter = new BookItemAdapter(data , getActivity() , getActivity());
         bookMallGookbookRecyclerView.setLayoutManager(layoutManager);
         bookMallGookbookRecyclerView.setAdapter(bookItemAdapter);

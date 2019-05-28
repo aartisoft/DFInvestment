@@ -11,6 +11,7 @@ import com.tyqhwl.jrqh.ApplicationStatic;
 import com.tyqhwl.jrqh.R;
 import com.tyqhwl.jrqh.base.BaseActivity;
 import com.tyqhwl.jrqh.base.BaseFragmentAdapter;
+import com.tyqhwl.jrqh.base.IntentSkip;
 import com.tyqhwl.jrqh.homepage.fragment.CatagoryFragment;
 import com.tyqhwl.jrqh.homepage.view.BookEntry;
 
@@ -55,14 +56,21 @@ public class CatagoryActivity extends BaseActivity {
     }
 
     
-    
-    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // TODO: add setContentView(...) invocation
         ButterKnife.bind(this);
         initIntent();
+        getIntentExers();
+    }
+
+    private void getIntentExers() {
+        if (getIntent() != null && getIntent().getSerializableExtra(IntentSkip.INTENT_BUILD) != null){
+            int i = (int) getIntent().getSerializableExtra(IntentSkip.INTENT_BUILD);
+            catagoryActViewpager.setCurrentItem(i);
+            showIndet(i);
+        }
     }
 
     private void initIntent() {

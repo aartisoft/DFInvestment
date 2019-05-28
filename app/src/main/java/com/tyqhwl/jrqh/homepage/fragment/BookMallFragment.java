@@ -22,7 +22,9 @@ import com.tyqhwl.jrqh.base.BaseFragmentAdapter;
 import com.tyqhwl.jrqh.base.EventBusTag;
 import com.tyqhwl.jrqh.base.IntentSkip;
 import com.tyqhwl.jrqh.base.MyViewPager;
+import com.tyqhwl.jrqh.homepage.activity.CatagoryActivity;
 import com.tyqhwl.jrqh.homepage.activity.SeekActivity;
+import com.tyqhwl.jrqh.homepage.activity.TopActivity;
 import com.tyqhwl.jrqh.homepage.presenter.BookItemPresenter;
 import com.tyqhwl.jrqh.homepage.view.BookEntry;
 import com.tyqhwl.jrqh.homepage.view.BookItemView;
@@ -137,14 +139,31 @@ public class BookMallFragment extends BaseFragment implements BookItemView {
     }
 
     @OnClick({R.id.book_mall_frag_seek,
-            R.id.study_fragment_tital, R.id.book_mall_viewpager})
+            R.id.study_fragment_tital, R.id.book_mall_viewpager
+    ,R.id.book_mall_thread_layout , R.id.book_mall_second_layout
+            ,R.id.book_mall_first_layout,R.id.book_mall_four_layout})
     public void onViewClickeds(View view) {
         switch (view.getId()) {
             case R.id.book_mall_frag_seek:
                 break;
             case R.id.study_fragment_tital:
                 break;
-
+            case R.id.book_mall_thread_layout:
+                //畅销榜单
+                IntentSkip.startIntent(getActivity() , new TopActivity() , null);
+                break;
+            case R.id.book_mall_second_layout:
+                //分类
+                IntentSkip.startIntent(getActivity() , new CatagoryActivity() , null);
+                break;
+            case R.id.book_mall_first_layout:
+                //分类
+                IntentSkip.startIntent(getActivity() , new CatagoryActivity() , null);
+                break;
+            case R.id.book_mall_four_layout:
+                //分类
+                IntentSkip.startIntent(getActivity() , new CatagoryActivity() , 1);
+                break;
         }
     }
 
